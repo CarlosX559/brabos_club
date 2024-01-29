@@ -9,7 +9,7 @@ html {
 }
 
 :root {
-    --font-title: 64px;
+    --font-title: 48px;
     --font-info: 20px;
     --font-sub-title: 24px;
     --font-roboto: 'Roboto';
@@ -583,12 +583,17 @@ nav {
                                     }
                                 }
 
+                                .title_info_tipo {
+                                    width: 100%;
+                                }
+
                                 .title_info_tipo h2 {
                                     color: #9CA3AF;
                                     font-family: var(--font-roboto);
                                     font-size: 32px;
                                     font-weight: 700;
                                     text-transform: uppercase;
+                                    text-align: left;
                                 }
 
                                 .info_tipo p {
@@ -1027,7 +1032,212 @@ nav {
 }
 
 
+#container_cards {
 
+    background-image: url(../img/bg_cards.png);
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    .bg_shadow {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .container_cards {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 60px 0px 60px 0px;
+
+        .container_cards_int {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1380px;
+
+            .area_cards {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 80px;
+                width: 100%;
+
+                .title_cards h2 {
+                    color: #F9FAFB;
+                    font-family: var(--font-mediaval);
+                    font-size: var(--font-title);
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+
+            .area_cards_swiper {
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+                padding: 20px 20px;
+                border-radius: 12px;
+                border: 1px solid #9AD5E9;
+                background: #DBF6FF;
+
+                .area_cards_swiper_int {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 100%;
+                    max-width: 300px;
+
+                    img {
+                        max-width: 80px;
+                        width: 100%;
+                        height: auto;
+                        border-radius: 100px;
+                        object-fit: contain;
+                    }
+
+                    .title_swiper h2 {
+                        color: #1D373E;
+                        font-family: var(--font-roboto);
+                        font-size: 22px;
+                    }
+
+                    .sub_title_swiper p {
+                        color: #1D373E;
+                        font-family: var(--font-roboto);
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    z-index: 0 !important;
+    overflow-y: visible !important;
+    padding: 0px 0px 0px 0px !important;
+
+    .swiper-button-next {
+        background-image: url(../img/arrow_left.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 65px;
+        right: 10px;
+        transition: all ease 200ms;
+        object-fit: contain;
+        transform-origin: left;
+    }
+
+    .swiper-button-next:hover {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    .swiper-button-prev {
+        background-image: url(../img/arrow_right.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 65px;
+        left: 10px;
+        transition: all ease 200ms;
+        object-fit: contain;
+        transform-origin: right;
+    }
+
+    .swiper-button-prev:hover {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    .swiper-button-next:after {
+        content: '';
+    }
+
+    .swiper-button-prev:after {
+        content: '';
+    }
+
+    .swiper-slide {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+
+        .card_dwarfs_jogar {
+            border-radius: 20px;
+            background: rgba(3, 7, 18, 0.80);
+            max-width: 400px;
+            width: 100%;
+            height: 540px;
+
+            .card_dwarfs_jogar_int {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+
+                .dwarfs_card_jogar {
+                    max-width: max-content;
+                    width: 100%;
+                }
+
+                .area_texts_card_dwarfs_jogar {
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 0px 40px 40px 40px;
+
+                    .title_card_dwarfs_jogar h2 {
+                        color: #9CA3AF;
+                        font-family: var(--font-roboto);
+                        font-size: 26px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+
+                    .sub_title_card_dwarfs_jogar p {
+                        color: #9CA3AF;
+                        font-family: var(--font-titillium);
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+
+}
+
+.swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 0px !important;
+}
+
+.swiper-wrapper {
+    padding: 0px 0px;
+
+}
 
 
 
@@ -1419,7 +1629,25 @@ nav {
             }
         }
     }
-   
 
 
+    #container_cards {
+        .container_cards {
+            .container_cards_int {
+                .area_cards {
+                    gap: 40px;
+                }
+            }
+        }
+
+    }
+
+    .swiper .swiper-button-prev {
+        width: 50px;
+        left: 12px;
+    }
+    .swiper .swiper-button-next {
+        width: 50px;
+        right: 12px;
+    }
 }
