@@ -405,6 +405,15 @@ nav {
 }
 
 
+@keyframes opacidade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 #container_personagens {
     background-image: url(../img/personagens_bg.png);
     width: 100%;
@@ -414,7 +423,7 @@ nav {
     background-size: cover;
     position: relative;
     z-index: 1;
-
+   
     .bg_shadow {
         position: absolute;
         top: 0px;
@@ -504,20 +513,25 @@ nav {
                                 width: 100%;
 
                                 img {
-                                    max-width: max-content;
+                                    max-width: 70px;
                                     width: 100%;
                                     height: auto;
                                     filter: grayscale(1);
                                     transition: all ease 200ms;
                                     cursor: pointer;
+                                    object-fit: contain;
                                 }
 
                                 img:hover {
                                     filter: grayscale(0);
                                 }
+                                .personagem_option {
+                                    filter: grayscale(1);
+                                }
 
-                                .active_personagem {
+                                .personagem_option.active {
                                     filter: grayscale(0);
+                                    transform: scale3d(1.1,1.1,1.1);
                                 }
                             }
 
@@ -597,6 +611,32 @@ nav {
                                 }
 
                                 .info_tipo p {
+                                    color: #9CA3AF;
+                                    font-family: var(--font-titillium);
+                                    font-size: 20px;
+                                    font-weight: 400;
+
+                                    b {
+                                        color: #FBC321;
+                                        font-size: 20px;
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                .title_info_tipo_mistico {
+                                    width: 100%;
+                                }
+
+                                .title_info_tipo_mistico h2 {
+                                    color: #9CA3AF;
+                                    font-family: var(--font-roboto);
+                                    font-size: 32px;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    text-align: left;
+                                }
+
+                                .sub_title_info_tipo_mistico p {
                                     color: #9CA3AF;
                                     font-family: var(--font-titillium);
                                     font-size: 20px;
@@ -1033,7 +1073,6 @@ nav {
 
 
 #container_cards {
-
     background-image: url(../img/bg_cards.png);
     width: 100%;
     height: auto;
@@ -1240,7 +1279,116 @@ nav {
 }
 
 
+#container_comunidade {
+    background-image: url(../img/comunidade_bg.png);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
 
+    .bg_shadow {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .container_comunidade {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 60px 0px 60px 0px;
+
+        .container_comunidade_int {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1280px;
+            width: 100%;
+
+            .area_comunidade {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 80px;
+                width: 100%;
+
+                .title_comunidade h2 {
+                    color: #F9FAFB;
+                    font-family: var(--font-mediaval);
+                    font-size: var(--font-title);
+                    text-align: center;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+
+                .area_cards_comunidade {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    row-gap: 50px;
+                    column-gap: 50px;
+                    width: 100%;
+
+                    .card_comunidade {
+                        border-radius: 20px;
+                        background: rgba(3, 7, 18, 0.95);
+                        max-width: 340px;
+                        width: 100%;
+                        height: 220px;
+                        padding: 20px;
+                        position: relative;
+
+                        img {
+                            position: absolute;
+                            top: -20px;
+                            left: -20px;
+                            max-width: 80px;
+                            width: 100%;
+                            object-fit: contain;
+                        }
+
+                        .card_comunidade_int {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            height: 100%;
+                            justify-content: center;
+                            align-items: center;
+
+                            .title_card_comunidade h2 {
+                                color: #9CA3AF;
+                                text-align: center;
+                                font-family: var(--font-roboto);
+                                font-size: 20px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                            }
+
+                            .sub_title_card_comunidade p {
+                                color: #9CA3AF;
+                                text-align: center;
+                                font-family: var(--font-titillium);
+                                font-size: 14px;
+                                font-weight: 400;
+                            }
+
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+}
 
 
 
@@ -1383,6 +1531,7 @@ nav {
 
     #container_home_brabos {
         .container_home_brabos {
+            padding: 40px 0px 40px 0px;
             .container_home_brabos_int {
                 .area_home_brabos {
                     display: flex;
@@ -1423,6 +1572,7 @@ nav {
 
     #container_personagens {
         .container_personagens {
+            padding: 40px 0px 40px 0px;
             .container_personagens_int {
                 .area_personagens {
                     gap: 60px;
@@ -1449,6 +1599,7 @@ nav {
 
     #container_mundos {
         .container_mundos {
+            padding: 40px 0px 40px 0px;
             .container_mundos_int {
                 .area_mundos {
                     gap: 60px;
@@ -1477,6 +1628,7 @@ nav {
 
     #container_olimpiadas {
         .container_olimpiadas {
+            padding: 40px 0px 40px 0px;
             .container_olimpiadas_int {
                 .area_olimpiadas {
                     gap: 60px;
@@ -1509,12 +1661,35 @@ nav {
 
     #container_jogar {
         .container_jogar {
+            padding: 40px 0px 40px 0px;
             .container_jogar_int {
                 .area_jogar {
                     padding: 0px 20px;
 
                     .area_card_dwarfs_jogar_total {
                         flex-direction: column;
+                        gap: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    #container_cards {
+        .container_cards {
+            padding: 40px 0px 40px 0px;
+        }
+
+    }
+
+    #container_comunidade {
+        .container_comunidade {
+            padding: 40px 0px 40px 0px;
+            .container_comunidade_int {
+                .area_comunidade {
+                    gap: 40px;
+                    .area_cards_comunidade {
+                        justify-content: center;
                         gap: 40px;
                     }
                 }
@@ -1553,6 +1728,7 @@ nav {
             .container_personagens_int {
                 .area_personagens {
                     gap: 40px;
+                    padding: 0px;
                 }
             }
         }
@@ -1646,8 +1822,30 @@ nav {
         width: 50px;
         left: 12px;
     }
+
     .swiper .swiper-button-next {
         width: 50px;
         right: 12px;
     }
+
+
+    #container_comunidade {
+        .container_comunidade {
+            .container_comunidade_int {
+                .area_comunidade {
+                    .area_cards_comunidade{
+                        .card_comunidade {
+                            height: 160px;
+                        }
+                        .card_comunidade img {
+                            max-width: 70px;
+                            left: -10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
