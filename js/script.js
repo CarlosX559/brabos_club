@@ -94,7 +94,7 @@ function personagens() {
           removeActive()
           element.classList.toggle("active");
 
-          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_humanos.webp)";
+          bg_personagens.style.backgroundImage = "url(img/personagens_bg_humanos.webp)";
 
           title.innerHTML = "humanos";
           sub_title.innerHTML = `Mais balanceado em status.<br>
@@ -116,7 +116,7 @@ function personagens() {
           removeActive()
           element.classList.toggle("active");
 
-          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_elfos.webp)";
+          bg_personagens.style.backgroundImage = "url(img/personagens_bg_elfos.webp)";
 
           title.innerHTML = "elfos";
           sub_title.innerHTML = `São velozes em ataque, movimento e lançamento de magias. São precisos em seus ataques, além de ter alto poder de evasão. Seu ponto fraco é sua força de ataque em relação as outras raças.<br>
@@ -137,7 +137,7 @@ function personagens() {
           removeActive()
           element.classList.toggle("active");
 
-          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_elfos_negros.webp)";
+          bg_personagens.style.backgroundImage = "url(img/personagens_bg_elfos_negros.webp)";
 
           title.innerHTML = "elfos negros";
           sub_title.innerHTML = `Eles possuem alto de poder de Ataque e Magia (Força e Inteligência).<br>
@@ -158,7 +158,7 @@ function personagens() {
           removeActive()
           element.classList.toggle("active");
 
-          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_orcs.webp)";
+          bg_personagens.style.backgroundImage = "url(img/personagens_bg_orcs.webp)";
 
           title.innerHTML = "Orcs";
           sub_title.innerHTML = "Possuem grande força e são robustos em vida e mana, possuem alta capacidade de regeneração de vida, no entanto são classes lentas em movimento, lançamento de magias e ataques.<br>Forte resistência a efeitos negativos (debuffs), como venenos, paralisias."
@@ -177,7 +177,7 @@ function personagens() {
           removeActive()
           element.classList.toggle("active");
 
-          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_dwarfs.webp)";
+          bg_personagens.style.backgroundImage = "url(img/personagens_bg_dwarfs.webp)";
             
           title.innerHTML = "DWARFS";
           sub_title.innerHTML = "São os únicos capazes de criar itens e possuem grande força. <br>Possui o maior inventário em relação as outras raças e sua penalidade de peso é menor.";
