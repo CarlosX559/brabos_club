@@ -1634,7 +1634,17 @@ nav {
 
                 .area_btns_header {
                     flex-direction: column;
-
+                    max-width: 270px;
+                    a {
+                        .bg_btn_1 {
+                            left: 0px;
+                        }
+                        .bg_btn_3 {
+                            right: 0px;
+                            top: auto;
+                            bottom: -4px;
+                        }
+                    }
                     .btn_header_1 h2 {
                         font-size: 18px;
                     }
