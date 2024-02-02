@@ -66,18 +66,25 @@ function personagens() {
   let personagens_opcao = document.querySelector(".personagens");
   let tipo_mistico = document.querySelector(".title_info_tipo_mistico h2");
   let sub_tipo_mistico = document.querySelector(".sub_title_info_tipo_mistico p");
+  
+  let bg_personagens = document.getElementById("container_personagens");
 
   let info_tipo = document.querySelector(".info_tipo p");
 
   let animationOpacity = document.querySelectorAll(".animation_opacity");
+  let animationOpacityBg = document.querySelector(".animation_opacity_bg");
 
   personagens.forEach((element, key) => {
     element.addEventListener('click', () => {
 
       animationOpacity.forEach((element) => {
-        element.style.animation = "opacidade 500ms";
+    
+        element.style.animation = "opacidade 400ms";
+        animationOpacityBg.style.animation = "opacidade";
+      
         setTimeout(() => {
           element.style.animation = "";
+          animationOpacityBg.style.animation = "";
         }, 200);
       });
 
@@ -86,6 +93,8 @@ function personagens() {
         case 0:
           removeActive()
           element.classList.toggle("active");
+
+          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_humanos.webp)";
 
           title.innerHTML = "humanos";
           sub_title.innerHTML = `Mais balanceado em status.<br>
@@ -107,6 +116,8 @@ function personagens() {
           removeActive()
           element.classList.toggle("active");
 
+          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_elfos.webp)";
+
           title.innerHTML = "elfos";
           sub_title.innerHTML = `São velozes em ataque, movimento e lançamento de magias. São precisos em seus ataques, além de ter alto poder de evasão. Seu ponto fraco é sua força de ataque em relação as outras raças.<br>
           Os elfos podem ficar submersos por mais tempo e saltar para locais mais altos.`;
@@ -125,6 +136,8 @@ function personagens() {
         case 2:
           removeActive()
           element.classList.toggle("active");
+
+          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_elfos_negros.webp)";
 
           title.innerHTML = "elfos negros";
           sub_title.innerHTML = `Eles possuem alto de poder de Ataque e Magia (Força e Inteligência).<br>
@@ -145,6 +158,8 @@ function personagens() {
           removeActive()
           element.classList.toggle("active");
 
+          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_orcs.webp)";
+
           title.innerHTML = "Orcs";
           sub_title.innerHTML = "Possuem grande força e são robustos em vida e mana, possuem alta capacidade de regeneração de vida, no entanto são classes lentas em movimento, lançamento de magias e ataques.<br>Forte resistência a efeitos negativos (debuffs), como venenos, paralisias."
           tipo_mistico.innerHTML = "Místico";
@@ -162,6 +177,8 @@ function personagens() {
           removeActive()
           element.classList.toggle("active");
 
+          bg_personagens.style.backgroundImage = "url(../img/personagens_bg_dwarfs.webp)";
+            
           title.innerHTML = "DWARFS";
           sub_title.innerHTML = "São os únicos capazes de criar itens e possuem grande força. <br>Possui o maior inventário em relação as outras raças e sua penalidade de peso é menor.";
           info_tipo.innerHTML = `É um tipo de artesão e colecionador de itens, que possui grande força e utiliza armaduras pesadas (heavy). No estilo de jogo eles são habilidosos em combate corpo a corpo, principalmente utilizando grandes machados. São capazes de invocar autômatos para auxiliar nas guerras de conquista de Castelos e durante sua caçada.<br><br>

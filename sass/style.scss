@@ -21,6 +21,7 @@ html {
 body {
     margin: 0px;
     padding: 0px;
+    background: rgba(3,7,18,.95);
 }
 
 a {
@@ -100,7 +101,7 @@ header {
 
                 a {
                     width: 100%;
-                    max-width: 250px;
+                    max-width: 260px;
 
                     .bg_btn_1 {
                         position: absolute;
@@ -108,16 +109,18 @@ header {
                         width: 100%;
                         height: auto;
                         z-index: 1;
-                        left: -6px;
+                        left: 8px;
+                        top: -4px;
                     }
 
-                    .bg_btn_2 {
+                    .bg_btn_3 {
                         position: absolute;
                         max-width: max-content;
                         width: 100%;
                         height: auto;
                         z-index: 1;
                         right: 4px;
+                        top: -4px;
                     }
                 }
 
@@ -409,13 +412,18 @@ nav {
     0% {
         opacity: 0;
     }
+   
     100% {
         opacity: 1;
     }
 }
 
+.animation_opacity_bg {
+    transition: all linear 400ms;
+}
+
 #container_personagens {
-    background-image: url(../img/personagens_bg.png);
+    background-image: url(../img/personagens_bg_dwarfs.webp);
     width: 100%;
     height: 100%;
     background-position: center;
@@ -437,7 +445,7 @@ nav {
         justify-content: center;
         width: 100%;
         padding: 60px 0px 60px 0px;
-
+        
         .container_personagens_int {
             display: flex;
             justify-content: center;
