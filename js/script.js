@@ -52,10 +52,48 @@ const removeActive = () => {
   const btnActive = [...document.querySelectorAll(".personagem_option.active")];
   //map para percorrer
   btnActive.map((el) => {
-      el.classList.remove("active");
+    el.classList.remove("active");
   })
 
 }
+
+
+function animation_opacity() {
+  let animationOpacity = document.querySelectorAll(".animation_opacity");
+  let animationOpacityBg = document.querySelector(".animation_opacity_bg");
+
+
+      animationOpacity.forEach((element) => {
+
+        element.style.animation = "opacidade 400ms";
+        animationOpacityBg.style.animation = "opacidade";
+
+        setTimeout(() => {
+          element.style.animation = "";
+          animationOpacityBg.style.animation = "";
+        }, 200);
+      });
+
+
+
+}
+
+function animation_opacity_mundos() {
+  let animation_opacity_mundos = document.querySelectorAll(".animation_opacity_mundos");
+
+      animation_opacity_mundos.forEach((element) => {
+
+        element.style.animation = "opacidade 400ms";
+    
+        setTimeout(() => {
+          element.style.animation = "";
+        }, 200);
+      });
+   
+
+}
+
+
 
 function personagens() {
 
@@ -66,28 +104,16 @@ function personagens() {
   let personagens_opcao = document.querySelector(".personagens");
   let tipo_mistico = document.querySelector(".title_info_tipo_mistico h2");
   let sub_tipo_mistico = document.querySelector(".sub_title_info_tipo_mistico p");
-  
+
   let bg_personagens = document.getElementById("container_personagens");
 
   let info_tipo = document.querySelector(".info_tipo p");
 
-  let animationOpacity = document.querySelectorAll(".animation_opacity");
-  let animationOpacityBg = document.querySelector(".animation_opacity_bg");
 
   personagens.forEach((element, key) => {
     element.addEventListener('click', () => {
 
-      animationOpacity.forEach((element) => {
-    
-        element.style.animation = "opacidade 400ms";
-        animationOpacityBg.style.animation = "opacidade";
-      
-        setTimeout(() => {
-          element.style.animation = "";
-          animationOpacityBg.style.animation = "";
-        }, 200);
-      });
-
+      animation_opacity()
 
       switch (key) {
         case 0:
@@ -178,7 +204,7 @@ function personagens() {
           element.classList.toggle("active");
 
           bg_personagens.style.backgroundImage = "url(img/personagens_bg_dwarfs.webp)";
-            
+
           title.innerHTML = "DWARFS";
           sub_title.innerHTML = "São os únicos capazes de criar itens e possuem grande força. <br>Possui o maior inventário em relação as outras raças e sua penalidade de peso é menor.";
           info_tipo.innerHTML = `É um tipo de artesão e colecionador de itens, que possui grande força e utiliza armaduras pesadas (heavy). No estilo de jogo eles são habilidosos em combate corpo a corpo, principalmente utilizando grandes machados. São capazes de invocar autômatos para auxiliar nas guerras de conquista de Castelos e durante sua caçada.<br><br>
@@ -200,3 +226,75 @@ function personagens() {
 }
 
 personagens();
+
+
+const removeActive_mundos = () => {
+  //Transformando o nodelist em array
+  const btnActive = [...document.querySelectorAll(".mundo_opcao.active")];
+  //map para percorrer
+  btnActive.map((el) => {
+    el.classList.remove("active");
+  })
+
+}
+
+function mundos() {
+
+  let title_mundos = document.querySelector(".title_mundos_card h2");
+  let sub_title_mundos = document.querySelector(".sub_title_mundos_card p");
+  let img_mundos = document.querySelector(".img_mundos");
+
+  let mundos = document.querySelectorAll(".area_opcoes_mundos_int img");
+
+
+  mundos.forEach((element, key) => {
+
+    element.addEventListener('click', () => {
+
+      animation_opacity_mundos()
+
+      switch (key) {
+        case 0:
+          removeActive_mundos()
+          element.classList.toggle("active");
+
+          title_mundos.innerHTML = "PRIMEVAL LOW RATE";
+          sub_title_mundos.innerHTML = `O Bom e velho Lineage! Um mundo para jogadores que apreciam o clássico do Lineage, com jornada intensa e progressão valiosa.<br><br>
+        Sistema exclusivo de progressão gradativa, com uma atmosfera única e imersiva destinada aos que querem explorar ao máximo tudo que o mundo do Lineage 2 tem a oferecer.<br><br>
+        <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+
+          img_mundos.src = "img/mundo_primeval_lo_rate.png";
+          break;
+        case 1:
+          removeActive_mundos()
+          element.classList.toggle("active");
+          title_mundos.innerHTML = "PRIMEVAL WAR";
+          sub_title_mundos.innerHTML = `Um Mundo para os amantes do PVP. Personagens prontos para o combate com jornada simplificada.<br><br>
+          Temporadas mensais com mecânicas e eventos exclusivos para revelar os melhores guerreiros deste mundo. Renovação de recursos e destaque aos que se mostrarem habilidosos no combate PVP.<br><br>
+          <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+          img_mundos.src = "img/mundo_primeval.png";
+          break;
+        case 2:
+          removeActive_mundos()
+          element.classList.toggle("active");
+          title_mundos.innerHTML = "CLASSIC";
+          sub_title_mundos.innerHTML = `Um mundo para os jogadores destinados ao PVP Mid Rate com gráficos renovados e jogabilidade do clássico Interlude.<br><br>
+          Progressão acelerada, recompensas diárias e objetivos coletivos, o PVP é o alvo principal para os jogadores do mundo Classic. Uma experiência única com competitividade de alto nível.<br><br>
+          <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+
+          img_mundos.src = "img/mundo_classic.png";
+
+          break;
+
+
+      }
+
+    });
+
+  });
+
+
+
+}
+
+mundos();

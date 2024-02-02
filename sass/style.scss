@@ -21,7 +21,7 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    background: rgba(3,7,18,.95);
+    background: rgba(3, 7, 18, .95);
 }
 
 a {
@@ -412,10 +412,18 @@ nav {
     0% {
         opacity: 0;
     }
-   
+
     100% {
         opacity: 1;
     }
+}
+
+.animation_opacity {
+    transition: all linear 400ms;
+}
+
+.animation_opacity_mundos {
+    transition: all linear 400ms;
 }
 
 .animation_opacity_bg {
@@ -431,7 +439,7 @@ nav {
     background-size: cover;
     position: relative;
     z-index: 1;
-   
+
     .bg_shadow {
         position: absolute;
         top: 0px;
@@ -445,7 +453,7 @@ nav {
         justify-content: center;
         width: 100%;
         padding: 60px 0px 60px 0px;
-        
+
         .container_personagens_int {
             display: flex;
             justify-content: center;
@@ -533,13 +541,14 @@ nav {
                                 img:hover {
                                     filter: grayscale(0);
                                 }
+
                                 .personagem_option {
                                     filter: grayscale(1);
                                 }
 
                                 .personagem_option.active {
                                     filter: grayscale(0);
-                                    transform: scale3d(1.1,1.1,1.1);
+                                    transform: scale3d(1.1, 1.1, 1.1);
                                 }
                             }
 
@@ -762,6 +771,18 @@ nav {
                                     height: auto;
                                     cursor: pointer;
                                     border: none;
+                                }
+
+                                .mundo_opcao {
+                                    transition: all linear 100ms;
+                                }
+
+                                .mundo_opcao:hover {
+                                    border: 2px solid #FBC321;
+                                }
+
+                                .mundo_opcao.active {
+                                    border: 2px solid #FBC321;
                                 }
                             }
 
@@ -1540,6 +1561,7 @@ nav {
     #container_home_brabos {
         .container_home_brabos {
             padding: 40px 0px 40px 0px;
+
             .container_home_brabos_int {
                 .area_home_brabos {
                     display: flex;
@@ -1581,6 +1603,7 @@ nav {
     #container_personagens {
         .container_personagens {
             padding: 40px 0px 40px 0px;
+
             .container_personagens_int {
                 .area_personagens {
                     gap: 60px;
@@ -1608,6 +1631,7 @@ nav {
     #container_mundos {
         .container_mundos {
             padding: 40px 0px 40px 0px;
+
             .container_mundos_int {
                 .area_mundos {
                     gap: 60px;
@@ -1637,6 +1661,7 @@ nav {
     #container_olimpiadas {
         .container_olimpiadas {
             padding: 40px 0px 40px 0px;
+
             .container_olimpiadas_int {
                 .area_olimpiadas {
                     gap: 60px;
@@ -1670,6 +1695,7 @@ nav {
     #container_jogar {
         .container_jogar {
             padding: 40px 0px 40px 0px;
+
             .container_jogar_int {
                 .area_jogar {
                     padding: 0px 20px;
@@ -1693,9 +1719,11 @@ nav {
     #container_comunidade {
         .container_comunidade {
             padding: 40px 0px 40px 0px;
+
             .container_comunidade_int {
                 .area_comunidade {
                     gap: 40px;
+
                     .area_cards_comunidade {
                         justify-content: center;
                         gap: 40px;
@@ -1841,10 +1869,11 @@ nav {
         .container_comunidade {
             .container_comunidade_int {
                 .area_comunidade {
-                    .area_cards_comunidade{
+                    .area_cards_comunidade {
                         .card_comunidade {
                             height: 160px;
                         }
+
                         .card_comunidade img {
                             max-width: 70px;
                             left: -10px;
