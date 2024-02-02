@@ -430,6 +430,10 @@ nav {
     transition: all linear 400ms;
 }
 
+.animation_opacity_mundos_bg {
+    transition: all linear 400ms;
+}
+
 #container_personagens {
     background-image: url(../img/personagens_bg_dwarfs.webp);
     width: 100%;
@@ -685,7 +689,7 @@ nav {
 
 
 #container_mundos {
-    background-image: url(../img/mundos_bg.png);
+    background-image: url(../img/mundo_bg_primeval.png);
     width: 100%;
     height: 100%;
     background-position: center;

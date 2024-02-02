@@ -63,36 +63,20 @@ function animation_opacity() {
   let animationOpacityBg = document.querySelector(".animation_opacity_bg");
 
 
-      animationOpacity.forEach((element) => {
+  animationOpacity.forEach((element) => {
 
-        element.style.animation = "opacidade 400ms";
-        animationOpacityBg.style.animation = "opacidade";
+    element.style.animation = "opacidade 400ms";
+    animationOpacityBg.style.animation = "opacidade";
 
-        setTimeout(() => {
-          element.style.animation = "";
-          animationOpacityBg.style.animation = "";
-        }, 200);
-      });
+    setTimeout(() => {
+      element.style.animation = "";
+      animationOpacityBg.style.animation = "";
+    }, 200);
+  });
 
 
-
-}
-
-function animation_opacity_mundos() {
-  let animation_opacity_mundos = document.querySelectorAll(".animation_opacity_mundos");
-
-      animation_opacity_mundos.forEach((element) => {
-
-        element.style.animation = "opacidade 400ms";
-    
-        setTimeout(() => {
-          element.style.animation = "";
-        }, 200);
-      });
-   
 
 }
-
 
 
 function personagens() {
@@ -238,11 +222,30 @@ const removeActive_mundos = () => {
 
 }
 
+function animation_opacity_mundos() {
+  let animation_opacity_mundos = document.querySelectorAll(".animation_opacity_mundos");
+  let animation_opacity_mundos_bg = document.querySelector(".animation_opacity_mundos_bg");
+
+  animation_opacity_mundos.forEach((element) => {
+
+    element.style.animation = "opacidade 400ms";
+    animation_opacity_mundos_bg.style.animation = "opacidade";
+    setTimeout(() => {
+      element.style.animation = "";
+      animation_opacity_mundos_bg.style.animation = "";
+    }, 200);
+  });
+
+
+}
+
+
 function mundos() {
 
   let title_mundos = document.querySelector(".title_mundos_card h2");
   let sub_title_mundos = document.querySelector(".sub_title_mundos_card p");
   let img_mundos = document.querySelector(".img_mundos");
+  let bg_mundos = document.getElementById("container_mundos");
 
   let mundos = document.querySelectorAll(".area_opcoes_mundos_int img");
 
@@ -260,8 +263,10 @@ function mundos() {
 
           title_mundos.innerHTML = "PRIMEVAL LOW RATE";
           sub_title_mundos.innerHTML = `O Bom e velho Lineage! Um mundo para jogadores que apreciam o clássico do Lineage, com jornada intensa e progressão valiosa.<br><br>
-        Sistema exclusivo de progressão gradativa, com uma atmosfera única e imersiva destinada aos que querem explorar ao máximo tudo que o mundo do Lineage 2 tem a oferecer.<br><br>
-        <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+          Sistema exclusivo de progressão gradativa, com uma atmosfera única e imersiva destinada aos que querem explorar ao máximo tudo que o mundo do Lineage 2 tem a oferecer.<br><br>
+          <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+
+          bg_mundos.style.backgroundImage = "url(img/mundo_bg_primeval_low.png)";
 
           img_mundos.src = "img/mundo_primeval_lo_rate.png";
           break;
@@ -272,6 +277,9 @@ function mundos() {
           sub_title_mundos.innerHTML = `Um Mundo para os amantes do PVP. Personagens prontos para o combate com jornada simplificada.<br><br>
           Temporadas mensais com mecânicas e eventos exclusivos para revelar os melhores guerreiros deste mundo. Renovação de recursos e destaque aos que se mostrarem habilidosos no combate PVP.<br><br>
           <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+
+          bg_mundos.style.backgroundImage = "url(img/mundo_bg_primeval.png)";
+
           img_mundos.src = "img/mundo_primeval.png";
           break;
         case 2:
@@ -281,6 +289,8 @@ function mundos() {
           sub_title_mundos.innerHTML = `Um mundo para os jogadores destinados ao PVP Mid Rate com gráficos renovados e jogabilidade do clássico Interlude.<br><br>
           Progressão acelerada, recompensas diárias e objetivos coletivos, o PVP é o alvo principal para os jogadores do mundo Classic. Uma experiência única com competitividade de alto nível.<br><br>
           <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+
+          bg_mundos.style.backgroundImage = "url(img/mundo_bg_classic.png)";
 
           img_mundos.src = "img/mundo_classic.png";
 
