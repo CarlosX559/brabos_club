@@ -6,6 +6,7 @@ html {
 
 * {
     font-family: 'Roboto', 'MedievalSharp', 'Titillium Web';
+    box-sizing: border-box;
 }
 
 :root {
@@ -1425,6 +1426,155 @@ nav {
 
 
 
+#container_faq {
+    background-image: url(../img/faq_bg.png);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    .bg_shadow {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .container_faq {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 40px 0px 40px 0px;
+
+        .container_faq_int {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            max-width: 1280px;
+
+            .title_faq h2 {
+                color: #F9FAFB;
+                font-family: var(--font-mediaval);
+                font-size: var(--font-title);
+                text-align: center;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            .area_faq {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .faq_quests {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background: #030712;
+                    border-radius: 20px;
+                    width: 100%;
+                    padding: 15px 30px 15px 30px;
+                    cursor: pointer;
+                    transition: all ease-in-out 400ms;
+
+                    h2 {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: #808080;
+                        margin: 0px;
+                    }
+
+                    .quest {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        gap: 20px;
+                        cursor: pointer;
+
+                        .area_img_faq {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 40px;
+                            height: 40px;
+                            padding: 10px;
+                        }
+
+                    }
+
+                    .quest h2 {
+                        font-family: var(--font-roboto);
+                        font-weight: 400;
+                        font-size: 24px;
+                        color: #9CA3AF;
+                        margin: 0px;
+                        line-height: 120%;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+
+}
+
+
+.aswer.open {
+    margin: -20px 0px 20px 0px;
+    padding: 25px 30px 25px 30px;
+}
+
+
+.aswer {
+    max-height: 0px;
+    opacity: 0;
+    max-width: 1130px;
+    transition: all ease-in-out 400ms;
+    transform: scaleY(0.2);
+    transform-origin: top;
+    background: #171B20;
+    border-radius: 0px 0px 36px 36px;
+    position: relative;
+    z-index: -1;
+
+    h2 {
+        font-family: var(--font-roboto);
+        font-weight: 300;
+        font-size: 20px;
+        color: #9CA3AF;
+        margin: 0px;
+    }
+}
+
+.open {
+    display: flex;
+    height: fit-content;
+    max-height: 100%;
+    transition: all ease-in-out 400ms;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.faq_quests.close_faq {
+    border-top: 1px solid #FBC321;
+}
+
+.faq_quests:hover {
+    border-top: 1px solid #FBC321;
+}
+
+
 @media(max-width: 1024px) {
 
     :root {
@@ -1737,6 +1887,14 @@ nav {
         }
     }
 
+    #container_faq {
+        .container_faq {
+            .container_faq_int {
+                margin: 0px 20px;
+            }
+        }
+    }
+
 }
 
 
@@ -1875,7 +2033,7 @@ nav {
                 .area_comunidade {
                     .area_cards_comunidade {
                         .card_comunidade {
-                            height: 160px;
+                            height: auto;
                         }
 
                         .card_comunidade img {
@@ -1888,5 +2046,21 @@ nav {
         }
     }
 
+    #container_faq {
+        .container_faq {
+            .container_faq_int {
+                .area_faq {
+                    .faq_quests {
+                        .quest h2 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
+    .aswer h2 {
+        font-size: 18px;
+    }
 }

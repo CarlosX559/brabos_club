@@ -1,3 +1,29 @@
+function faq() {
+
+  const quest = document.querySelectorAll(".faq_quests");
+  const aswer = document.querySelectorAll(".aswer");
+  const img_icon = document.querySelectorAll('.area_img_faq img');
+
+  for (let i = 0; i < quest.length; i++) {
+
+      quest[i].addEventListener('click', () => {
+
+          if (quest[i].classList.contains("close_faq")) {
+              quest[i].classList.toggle("close_faq");
+              aswer[i].classList.toggle("open");
+              img_icon[i].src = 'img/+.svg';
+          } else {
+              quest[i].classList.add("close_faq");
+              aswer[i].classList.add("open");
+
+              img_icon[i].src = 'img/-.svg';
+          }
+
+      });
+
+  }
+}
+faq();
 function menu() {
   let open = document.querySelector(".menu_open");
   let menu = document.getElementById("container_menu");
@@ -25,6 +51,9 @@ function menu() {
   });
 }
 menu();
+
+
+
 
 const animations = document.querySelectorAll("[data-animation]");
 const animationClass = "animate";
