@@ -1,29 +1,92 @@
 function faq() {
 
-  const quest = document.querySelectorAll(".faq_quests");
-  const aswer = document.querySelectorAll(".aswer");
-  const img_icon = document.querySelectorAll('.area_img_faq img');
+  let quest = document.querySelectorAll(".faq_quests");
+  let aswer = document.querySelectorAll(".aswer");
+  let img_icon = document.querySelectorAll('.area_img_faq img');
 
   for (let i = 0; i < quest.length; i++) {
 
-      quest[i].addEventListener('click', () => {
+    quest[i].addEventListener('click', () => {
 
-          if (quest[i].classList.contains("close_faq")) {
-              quest[i].classList.toggle("close_faq");
-              aswer[i].classList.toggle("open");
-              img_icon[i].src = 'img/+.svg';
-          } else {
-              quest[i].classList.add("close_faq");
-              aswer[i].classList.add("open");
+      if (quest[i].classList.contains("close_faq")) {
+        quest[i].classList.toggle("close_faq");
+        aswer[i].classList.toggle("open");
+        img_icon[i].src = 'img/+.svg';
+      } else {
+        quest[i].classList.add("close_faq");
+        aswer[i].classList.add("open");
 
-              img_icon[i].src = 'img/-.svg';
-          }
+        img_icon[i].src = 'img/-.svg';
+      }
 
-      });
+    });
 
   }
 }
+
 faq();
+
+function animation_opacity_faq() {
+  let animationOpacity = document.querySelectorAll(".animation_opacity_faq");
+
+  animationOpacity.forEach((element) => {
+
+    element.style.animation = "opacidade 400ms";
+  
+    setTimeout(() => {
+      element.style.animation = "";
+
+    }, 200);
+  });
+
+}
+
+
+
+const removeActive_faq = () => {
+  //Transformando o nodelist em array
+  const btnActive = [...document.querySelectorAll(".area_faq.active")];
+  //map para percorrer
+  btnActive.map((el) => {
+    el.classList.remove("active");
+  })
+
+}
+
+const removeActive_options = () => {
+  //Transformando o nodelist em array
+  const btnActive = [...document.querySelectorAll(".opcoes_faq.active")];
+  //map para percorrer
+  btnActive.map((el) => {
+    el.classList.remove("active");
+  })
+
+}
+
+function faq_options() {
+
+  let area_options = document.querySelectorAll(".opcoes_faq");
+  let area_faq = document.querySelectorAll(".area_faq");
+
+  area_options.forEach((element, key) => {
+
+    element.addEventListener('click', () => {
+      animation_opacity_faq()
+      removeActive_faq()
+      area_faq[key].classList.toggle("active");
+
+      removeActive_options()
+      element.classList.toggle("active");
+
+    });
+
+  });
+
+
+}
+
+faq_options();
+
 function menu() {
   let open = document.querySelector(".menu_open");
   let menu = document.getElementById("container_menu");
@@ -51,8 +114,6 @@ function menu() {
   });
 }
 menu();
-
-
 
 
 const animations = document.querySelectorAll("[data-animation]");
@@ -102,8 +163,6 @@ function animation_opacity() {
       animationOpacityBg.style.animation = "";
     }, 200);
   });
-
-
 
 }
 
@@ -337,3 +396,4 @@ function mundos() {
 }
 
 mundos();
+

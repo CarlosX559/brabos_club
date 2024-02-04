@@ -13,6 +13,8 @@ html {
     --font-title: 48px;
     --font-info: 20px;
     --font-sub-title: 24px;
+    --font-title-info: 32px;
+    --font-sub-title-info: 20px;
     --font-roboto: 'Roboto';
     --color-font-secondary: #FBC321;
     --font-mediaval: 'MedievalSharp';
@@ -435,6 +437,10 @@ nav {
     transition: all linear 400ms;
 }
 
+.animation_opacity_faq {
+    transition: all linear 400ms;
+}
+
 #container_personagens {
     background-image: url(../img/personagens_bg_dwarfs.webp);
     width: 100%;
@@ -513,7 +519,7 @@ nav {
 
                     .card_personagens {
                         border-radius: 20px;
-                        background: rgba(3, 7, 18, 0.95);
+                        background: rgba(3, 7, 18, .8);
                         max-width: max-content;
                         width: 100%;
 
@@ -613,7 +619,7 @@ nav {
                                         .sub_title_info_caracteristicas p {
                                             color: #9CA3AF;
                                             font-family: var(--font-titillium);
-                                            font-size: 20px;
+                                            font-size: var(--font-sub-title-info);
                                             font-weight: 400;
                                         }
                                     }
@@ -626,7 +632,7 @@ nav {
                                 .title_info_tipo h2 {
                                     color: #9CA3AF;
                                     font-family: var(--font-roboto);
-                                    font-size: 32px;
+                                    font-size: var(--font-title-info);
                                     font-weight: 700;
                                     text-transform: uppercase;
                                     text-align: left;
@@ -635,12 +641,12 @@ nav {
                                 .info_tipo p {
                                     color: #9CA3AF;
                                     font-family: var(--font-titillium);
-                                    font-size: 20px;
+                                    font-size: var(--font-sub-title-info);
                                     font-weight: 400;
 
                                     b {
                                         color: #FBC321;
-                                        font-size: 20px;
+                                        font-size: var(--font-sub-title-info);
                                         font-weight: 700;
                                     }
                                 }
@@ -652,7 +658,7 @@ nav {
                                 .title_info_tipo_mistico h2 {
                                     color: #9CA3AF;
                                     font-family: var(--font-roboto);
-                                    font-size: 32px;
+                                    font-size: var(--font-title-info);
                                     font-weight: 700;
                                     text-transform: uppercase;
                                     text-align: left;
@@ -661,12 +667,12 @@ nav {
                                 .sub_title_info_tipo_mistico p {
                                     color: #9CA3AF;
                                     font-family: var(--font-titillium);
-                                    font-size: 20px;
+                                    font-size: var(--font-sub-title-info);
                                     font-weight: 400;
 
                                     b {
                                         color: #FBC321;
-                                        font-size: 20px;
+                                        font-size: var(--font-sub-title-info);
                                         font-weight: 700;
                                     }
                                 }
@@ -938,7 +944,7 @@ nav {
                                 .title_card_olimpiadas h2 {
                                     color: #9CA3AF;
                                     font-family: var(--font-roboto);
-                                    font-size: 32px;
+                                    font-size: var(--font-title-info);
                                     font-weight: 700;
                                     text-transform: uppercase;
                                 }
@@ -946,7 +952,7 @@ nav {
                                 .sub_title_card_olimpiadas p {
                                     color: #9CA3AF;
                                     font-family: var(--font-titillium);
-                                    font-size: 20px;
+                                    font-size: var(--font-sub-title-info);
                                     font-weight: 400;
                                 }
                             }
@@ -1046,7 +1052,7 @@ nav {
                                 .title_card_dwarfs_jogar h2 {
                                     color: #9CA3AF;
                                     font-family: var(--font-roboto);
-                                    font-size: 32px;
+                                    font-size: var(--font-title-info);
                                     font-weight: 700;
                                     text-transform: uppercase;
                                 }
@@ -1054,7 +1060,7 @@ nav {
                                 .sub_title_card_dwarfs_jogar p {
                                     color: #9CA3AF;
                                     font-family: var(--font-titillium);
-                                    font-size: 20px;
+                                    font-size: var(--font-sub-title-info);
                                     font-weight: 400;
                                 }
 
@@ -1289,7 +1295,7 @@ nav {
                     .sub_title_card_dwarfs_jogar p {
                         color: #9CA3AF;
                         font-family: var(--font-titillium);
-                        font-size: 20px;
+                        font-size: var(--font-sub-title-info);
                         font-weight: 400;
                     }
 
@@ -1399,7 +1405,7 @@ nav {
                                 color: #9CA3AF;
                                 text-align: center;
                                 font-family: var(--font-roboto);
-                                font-size: 20px;
+                                font-size: var(--font-sub-title-info);
                                 font-weight: 700;
                                 text-transform: uppercase;
                             }
@@ -1448,7 +1454,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 40px 0px 40px 0px;
+        padding: 60px 0px 60px 0px;
 
         .container_faq_int {
             display: flex;
@@ -1459,6 +1465,50 @@ nav {
             width: 100%;
             max-width: 1280px;
 
+            .area_opcoes_faq {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 20px;
+                column-gap: 40px;
+                width: 100%;
+
+                .opcoes_faq {
+                    background-color: #030712;
+                    width: 100%;
+                    max-width: max-content;
+                    border-radius: 10px;
+                    border: 1px solid #9CA3AF;
+                    cursor: pointer;
+                    transition: all ease 200ms;
+
+                    .opcoes_faq_int {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 30px 40px 30px 40px;
+
+                        .title_opcoes_faq h2 {
+                            color: #9CA3AF;
+                            font-family: var(--font-roboto);
+                            font-size: var(--font-info);
+                            text-align: center;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                .opcoes_faq.active {
+                    border: 1px solid #FBC321;
+                }
+
+                .opcoes_faq:hover {
+                    border: 1px solid #FBC321;
+                }
+            }
+
             .title_faq h2 {
                 color: #F9FAFB;
                 font-family: var(--font-mediaval);
@@ -1468,10 +1518,22 @@ nav {
                 text-transform: uppercase;
             }
 
-            .area_faq {
+            .area_faq.active {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+            }
+
+            .area_faq {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+
+                element {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
 
                 .faq_quests {
                     display: flex;
@@ -1480,10 +1542,11 @@ nav {
                     background: #030712;
                     border-radius: 20px;
                     width: 100%;
-                    padding: 15px 30px 15px 30px;
+                    padding: 20px 30px 20px 30px;
                     cursor: pointer;
                     transition: all ease-in-out 400ms;
-
+                    z-index: 1;
+                    
                     h2 {
                         font-weight: 400;
                         font-size: 18px;
@@ -1539,14 +1602,13 @@ nav {
 .aswer {
     max-height: 0px;
     opacity: 0;
-    max-width: 1130px;
     transition: all ease-in-out 400ms;
     transform: scaleY(0.2);
     transform-origin: top;
     background: #171B20;
     border-radius: 0px 0px 36px 36px;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 
     h2 {
         font-family: var(--font-roboto);
@@ -1554,6 +1616,13 @@ nav {
         font-size: 20px;
         color: #9CA3AF;
         margin: 0px;
+        a {
+            color: #FBC321;
+            text-decoration: underline;
+        }
+        b {
+            color: #FBC321;
+        }
     }
 }
 
@@ -1581,6 +1650,7 @@ nav {
         --font-title: 48px;
         --font-info: 20px;
         --font-sub-title: 22px;
+        --font-title-info: 28px;
     }
 
     .menu_mobile {
@@ -1635,16 +1705,19 @@ nav {
                 .area_btns_header {
                     flex-direction: column;
                     max-width: 270px;
+
                     a {
                         .bg_btn_1 {
                             left: 0px;
                         }
+
                         .bg_btn_3 {
                             right: 0px;
                             top: auto;
                             bottom: -4px;
                         }
                     }
+
                     .btn_header_1 h2 {
                         font-size: 18px;
                     }
@@ -1899,6 +1972,8 @@ nav {
 
     #container_faq {
         .container_faq {
+            padding: 40px 0px 40px 0px;
+
             .container_faq_int {
                 margin: 0px 20px;
             }
@@ -1911,9 +1986,11 @@ nav {
 @media(max-width: 480px) {
 
     :root {
-        --font-title: 36px;
+        --font-title: 34px;
         --font-info: 20px;
         --font-sub-title: 20px;
+        --font-title-info: 26px;
+        --font-sub-title-info: 18px;
     }
 
 
@@ -1937,6 +2014,15 @@ nav {
                 .area_personagens {
                     gap: 40px;
                     padding: 0px;
+                    margin: 0px 20px;
+
+                    .area_card_personagens {
+                        .card_personagens {
+                            .card_personagens_int {
+                                padding: 40px 25px 40px 25px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1952,6 +2038,26 @@ nav {
         }
     }
 
+    #container_mundos {
+        .container_mundos {
+            .container_mundos_int {
+                .area_mundos {
+                    .area_card_mundos {
+                        .area_card_mundos_int {
+                            .area_texts_mundos {
+                                .title_mundos_card h2 {
+                                    font-size: 26px;
+                                }
+                                .sub_title_mundos_card p {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     #container_olimpiadas {
         .container_olimpiadas {
@@ -2035,7 +2141,9 @@ nav {
         width: 50px;
         right: 12px;
     }
-
+    .swiper .swiper-slide .card_dwarfs_jogar {
+        height: auto;
+    }
 
     #container_comunidade {
         .container_comunidade {
