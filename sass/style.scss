@@ -1535,6 +1535,10 @@ nav {
                     gap: 10px;
                 }
 
+                .faq_quests.close_faq {
+                    border-radius: 20px 20px 0px 0px;
+                }
+
                 .faq_quests {
                     display: flex;
                     flex-direction: column;

@@ -1,27 +1,54 @@
+const removeActive_faq_aswer = () => {
+  //Transformando o nodelist em array
+  const btnActive = [...document.querySelectorAll(".aswer.open")];
+  //map para percorrer
+  btnActive.map((el) => {
+    el.classList.remove("open");
+  })
+
+}
+
+const removeActive_faq_quests = () => {
+  //Transformando o nodelist em array
+  const btnActive = [...document.querySelectorAll(".faq_quests.close_faq")];
+  //map para percorrer
+  btnActive.map((el) => {
+    el.classList.remove("close_faq");
+  })
+
+}
+
 function faq() {
 
   let quest = document.querySelectorAll(".faq_quests");
   let aswer = document.querySelectorAll(".aswer");
   let img_icon = document.querySelectorAll('.area_img_faq img');
 
-  for (let i = 0; i < quest.length; i++) {
+  quest.forEach((element, key) => {
 
-    quest[i].addEventListener('click', () => {
-
-      if (quest[i].classList.contains("close_faq")) {
-        quest[i].classList.toggle("close_faq");
-        aswer[i].classList.toggle("open");
-        img_icon[i].src = 'img/+.svg';
-      } else {
-        quest[i].classList.add("close_faq");
-        aswer[i].classList.add("open");
-
-        img_icon[i].src = 'img/-.svg';
+    element.addEventListener('click', () => {
+      
+     
+       
+      if (element.classList.contains("close_faq")) {
+        aswer[key].classList.toggle("open");
+        //img_icon[key].src = 'img/+.svg';
+      }else {
+        removeActive_faq_quests()
+        element.classList.toggle("close_faq");
+     
+      
+    
+        removeActive_faq_aswer()
+        aswer[key].classList.toggle("open");
+        //img_icon[key].src = 'img/-.svg';
       }
-
+      
     });
 
-  }
+  });
+
+
 }
 
 faq();
