@@ -213,7 +213,7 @@ nav {
 /*Container 1*/
 
 #container_home_brabos {
-    background-image: url(../img/brabos_club_bg.png);
+    background-image: url(../img/bg_home.png);
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1550,7 +1550,7 @@ nav {
                     cursor: pointer;
                     transition: all ease-in-out 400ms;
                     z-index: 1;
-                    
+
                     h2 {
                         font-weight: 400;
                         font-size: 18px;
@@ -1620,10 +1620,12 @@ nav {
         font-size: 20px;
         color: #9CA3AF;
         margin: 0px;
+
         a {
             color: #FBC321;
             text-decoration: underline;
         }
+
         b {
             color: #FBC321;
         }
@@ -1646,6 +1648,155 @@ nav {
 .faq_quests:hover {
     border-top: 1px solid #FBC321;
 }
+
+footer {
+    background-color: #030712;
+    width: 100%;
+
+    .container_footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0px 0px 40px 0px;
+
+        .container_footer_int {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+
+            .siga_brabos {
+                display: flex;
+                justify-content: center;
+                background-color: #10141e;
+                width: 100%;
+                padding: 20px 0px;
+
+                .siga_brabos_int {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+                    column-gap: 40px;
+                    width: 100%;
+                    max-width: 500px;
+
+                    .title_siga h2 {
+                        color: #FFFFFF;
+                        font-family: var(--font-roboto);
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+
+                    .area_siga_brabos_redes {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        max-width: 180px;
+                        a {
+                            display: flex;
+                            align-items: center;
+                        }
+                        img {
+                            max-width: max-content;
+                            width: 100%;
+                        }
+                    }
+
+
+                }
+            }
+
+
+            .area_footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                gap: 40px;
+                max-width: 800px;
+
+                .area_menu_footer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    gap: 20px;
+
+                    .menu_footer h2 {
+                        font-family: var(--font-roboto);
+                        font-weight: 400;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        color: #ffffff;
+                        transition: all ease 200ms
+                    }
+
+                    .menu_footer h2:hover {
+                        color: var(--color-font-secondary);
+                    }
+
+                }
+
+                .info_footer p {
+                    font-family: var(--font-roboto);
+                    font-weight: 400;
+                    color: #626262;
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 125%;
+                }
+
+                .area_privacidade {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    font-family: var(--font-titillium);
+                    font-size: 14px;
+                    color: #FFFFFF;
+
+                    .title_privavidade h2 {
+                        font-family: var(--font-titillium);
+                        font-size: 14px;
+                        color: #FFFFFF;
+                    }
+
+                    .title_termos h2 {
+                        font-family: var(--font-titillium);
+                        font-size: 14px;
+                        color: #FFFFFF;
+                    }
+                }
+
+                .diretos_reservados p {
+                    font-family: var(--font-roboto);
+                    font-weight: 400;
+                    color: #626262;
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
 
 
 @media(max-width: 1024px) {
@@ -1983,6 +2134,20 @@ nav {
             }
         }
     }
+  
+    footer {
+        .container_footer {
+            .container_footer_int {
+                .siga_brabos {
+                    padding: 20px 20px;
+                }
+                .area_footer {
+                    padding: 0px 20px;
+                    gap: 30px;
+                }
+            }
+        }
+    }
 
 }
 
@@ -1999,6 +2164,7 @@ nav {
 
 
     #container_home_brabos {
+        background-position: 30%;
         .container_home_brabos {
             .container_home_brabos_int {
                 .area_home_brabos {
@@ -2052,6 +2218,7 @@ nav {
                                 .title_mundos_card h2 {
                                     font-size: 26px;
                                 }
+
                                 .sub_title_mundos_card p {
                                     font-size: 20px;
                                 }
@@ -2145,6 +2312,7 @@ nav {
         width: 50px;
         right: 12px;
     }
+
     .swiper .swiper-slide .card_dwarfs_jogar {
         height: auto;
     }
