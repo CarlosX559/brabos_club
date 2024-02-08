@@ -205,6 +205,10 @@ nav {
                 color: var(--color-font-secondary);
             }
 
+            .active {
+                color: var(--color-font-secondary);
+            }
+
         }
     }
 }
@@ -1844,6 +1848,11 @@ footer {
                         font-size: 24px;
                         font-weight: 400;
                         color: #9CA3AF;
+
+                        u {
+                            font-family: var(--font-roboto);
+                            font-weight: bold;
+                        }
 
                         b {
                             font-family: var(--font-roboto);
