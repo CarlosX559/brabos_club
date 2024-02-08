@@ -1696,10 +1696,12 @@ footer {
                         justify-content: space-between;
                         width: 100%;
                         max-width: 180px;
+
                         a {
                             display: flex;
                             align-items: center;
                         }
+
                         img {
                             max-width: max-content;
                             width: 100%;
@@ -1791,11 +1793,98 @@ footer {
 
 
 
+#container_privacidade {
+    background-image: url(../img/bg_termos.png);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    .container_privacidade {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 60px 0px 60px 0px;
+
+        .container_privacidade_int {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            max-width: 1280px;
+
+            .title_privavidade_termos h2 {
+                color: #B6B6B6;
+                font-size: 42px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-family: var(--font-roboto);
+            }
+
+            .area_privacidade_termos {
+                background-color: rgba(3, 7, 18, .8);
+                border-radius: 20px;
+                width: 100%;
+                max-width: max-content;
+                border-top: 1px solid #fbc321;
+
+                .area_privacidade_termos_int {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 40px;
+
+                    .sub_title_termos p {
+                        font-family: var(--font-titillium);
+                        font-size: 24px;
+                        font-weight: 400;
+                        color: #9CA3AF;
+
+                        b {
+                            font-family: var(--font-roboto);
+                            font-weight: bold;
+                            font-size: 30px;
+                        }
+
+                        a {
+                            font-family: var(--font-roboto);
+                            font-weight: bold;
+                            text-decoration: underline;
+                            color: #9CA3AF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
+@media(max-width: 1440px) {
+    .container_menu {
+        .container_menu_int {
+            .area_menu_total {
+                .area_btns_header {
+                    a {
+                        .bg_btn_1 {
+                            display: none;
+                        }
 
-
+                        .bg_btn_3 {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -2134,16 +2223,43 @@ footer {
             }
         }
     }
-  
+
     footer {
         .container_footer {
             .container_footer_int {
                 .siga_brabos {
                     padding: 20px 20px;
                 }
+
                 .area_footer {
                     padding: 0px 20px;
                     gap: 30px;
+                }
+            }
+        }
+    }
+
+    #container_privacidade {
+        .container_privacidade {
+            padding: 40px 0px 40px 0px;
+
+            .container_privacidade_int {
+                padding: 0px 20px;
+
+                .title_privavidade_termos h2 {
+                    font-size: 36px;
+                }
+
+                .area_privacidade_termos {
+                    .area_privacidade_termos_int {
+                        .sub_title_termos p {
+                            font-size: 22px;
+                        }
+
+                        .sub_title_termos p b {
+                            font-size: 26px;
+                        }
+                    }
                 }
             }
         }
@@ -2165,6 +2281,7 @@ footer {
 
     #container_home_brabos {
         background-position: 30%;
+
         .container_home_brabos {
             .container_home_brabos_int {
                 .area_home_brabos {
@@ -2352,5 +2469,15 @@ footer {
 
     .aswer h2 {
         font-size: 18px;
+    }
+
+    #container_privacidade {
+        .container_privacidade {
+            .container_privacidade_int {
+                .title_privavidade_termos h2 {
+                    font-size: 28px;
+                }
+            }
+        }
     }
 }
