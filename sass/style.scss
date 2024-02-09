@@ -1896,14 +1896,121 @@ footer {
 }
 
 
+#container_baixar {
+    background-image: url(../img/baixar_bg.png);
+    width: 100%;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    .container_baixar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 40px 0px 40px 0px;
+        height: 100%;
+
+        .container_baixar_int {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1280px;
+
+            .area_baixar {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+                max-width: 1000px;
+                width: 100%;
+                gap: 40px;
+
+                .title_container_baixar h2 {
+                    font-family: var(--font-roboto);
+                    font-size: var(--font-title);
+                    font-weight: bold;
+                    color: #B6B6B6;
+                }
+
+                .sub_title_container_baixar p {
+                    font-family: var(--font-titillium);
+                    font-size: var(--font-sub-title);
+                    font-weight: 400;
+                    color: #9CA3AF;
+
+                    b {
+                        font-weight: bold;
+                        color: #FBC321;
+                        text-decoration: underline;
+                    }
+                }
+
+                .area_btns_baixar {
+                    display: flex;
+                    gap: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    max-width: 720px;
+
+                    .btn_baixar_1 {
+                        background-color: #030712;
+                        width: 100%;
+                        max-width: 320px;
+                        border-radius: 10px;
+                        border: 1px solid #FBC321;
+                        transition: all ease 200ms;
+                        transform: scale3d(1,1,1);
+                        transform-origin: bottom;
+                        
+                        .btn_baixar_1_int {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 15px;
+                            padding: 20px 20px;
+
+                            h2 {
+                                font-family: var(--font-roboto);
+                                font-size: 20px;
+                                text-transform: uppercase;
+                                color: #FFFFFF;
+                                font-weight: bold;
+
+                                b {
+                                    color: #FBC321;
+                                }
+                            }
+                        }
+                    }
+
+                    .btn_baixar_1:hover {
+                        transform: scale3d(1.1,1.1,1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 @media(max-width: 1024px) {
 
     :root {
-        --font-title: 48px;
+        --font-title: 46px;
         --font-info: 20px;
         --font-sub-title: 22px;
         --font-title-info: 28px;
+    }
+
+    header {
+        top: auto;
     }
 
     .menu_mobile {
@@ -2269,6 +2376,18 @@ footer {
                             font-size: 26px;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    #container_baixar {
+        height: 600px;
+        .container_baixar {
+            .container_baixar_int {
+                .area_baixar {
+                    gap: 20px;
+                    padding: 0px 20px;
                 }
             }
         }
