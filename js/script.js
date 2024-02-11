@@ -22,14 +22,12 @@ function faq() {
 
   let quest = document.querySelectorAll(".faq_quests");
   let aswer = document.querySelectorAll(".aswer");
-  let img_icon = document.querySelectorAll('.area_img_faq img');
+  //let img_icon = document.querySelectorAll('.area_img_faq img');
 
   quest.forEach((element, key) => {
 
     element.addEventListener('click', () => {
       
-     
-       
       if (element.classList.contains("close_faq")) {
         aswer[key].classList.toggle("open");
         //img_icon[key].src = 'img/+.svg';

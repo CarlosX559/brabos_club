@@ -2111,6 +2111,7 @@ footer {
                 .area_primeval_opcoes {
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     gap: 60px;
                     border-radius: 20px;
                     background: rgba(3, 7, 18, .95);
@@ -2241,6 +2242,153 @@ footer {
                             }
                         }
                     }
+
+                    .opcoes_outros.active {
+                        display: flex;
+                    }
+
+                    .area_loja {
+                        display: none;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 60px;
+                        width: 100%;
+                        flex-wrap: wrap;
+
+                        .area_texts_loja {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 40px;
+                            max-width: 600px;
+                            width: 100%;
+
+                            .area_texts_int {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+                                width: 100%;
+                            }
+
+                            .title_loja h2 {
+                                color: #9ca3af;
+                                font-family: var(--font-roboto);
+                                font-size: 26px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                            }
+
+                            .sub_title_loja p {
+                                color: #9ca3af;
+                                font-family: var(--font-titillium);
+                                font-size: 20px;
+                                font-weight: 400;
+                            }
+
+                        }
+                    }
+
+                    .area_eventos {
+                        display: none;
+                        flex-direction: column;
+                        gap: 60px;
+                        width: 100%;
+                        max-width: 1280px;
+
+                        .area_eventos_total {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            img {
+                                max-width: max-content;
+                                width: 100%;
+                            }
+                        }
+                        .area_eventos_total_2 {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            img {
+                                max-width: max-content;
+                                width: 100%;
+                            }
+                        }
+
+                        .area_eventos_int {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            width: 100%;
+                            max-width: 600px;
+
+                            .area_title_eventos {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            }
+
+                            .title_eventos h2 {
+                                color: #9ca3af;
+                                font-family: var(--font-roboto);
+                                font-size: 26px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                            }
+
+                            .sub_title_eventos p {
+                                color: #9ca3af;
+                                font-family: var(--font-titillium);
+                                font-size: 20px;
+                                font-weight: 400;
+                            }
+
+                            .info_bonus_eventos p {
+                                color: #FBC321;
+                                font-family: var(--font-titillium);
+                                font-size: 20px;
+                                font-weight: 400;
+                            }
+
+                            .area_infos_eventos {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+                                width: 100%;
+                               
+                                .area_infos_evento_int {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 20px;
+                                    align-items: flex-start;
+                                    border: 1px solid #FBC321;
+                                    border-radius: 10px;
+                                    padding: 20px;
+
+                                    .title_eventos_info h2 {
+                                        color: #ffffff;
+                                        font-family: var(--font-roboto);
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                    }
+
+                                    .sub_title_eventos_info p {
+                                        color: #9ca3af;
+                                        font-family: var(--font-titillium);
+                                        font-size: 20px;
+                                        font-weight: 400;
+                                        a {
+                                            color: #FBC321;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+
                 }
 
             }
@@ -2678,7 +2826,35 @@ footer {
             }
         }
     }
-
+    
+    #container_primeval {
+        .container_primeval {
+            .container_primeval_int {
+                .area_primeval {
+                    .area_primeval_opcoes {
+                        .area_eventos {
+                            justify-content: center;
+                            align-items: center;
+                            .area_eventos_int {
+                                .title_eventos h2 {
+                                    font-size: 24px;
+                                }
+                              
+                            }
+                            .area_eventos_total {
+                                flex-direction: column;
+                                gap: 40px;
+                            }
+                            .area_eventos_total_2 {
+                                flex-direction: column-reverse;
+                                gap: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -2939,6 +3115,19 @@ footer {
             height: 181px !important;
         }
 
+    }
+
+
+    #container_primeval {
+        .container_primeval {
+            .container_primeval_int {
+                .area_primeval {
+                    .area_primeval_opcoes {
+                        gap: 20px;
+                    }
+                }
+            }
+        }
     }
 
 }

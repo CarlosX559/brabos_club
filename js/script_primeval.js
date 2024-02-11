@@ -8,6 +8,16 @@ const removeActive = () => {
 
 }
 
+const removeActiveOpcoes = () => {
+    //Transformando o nodelist em array
+    const btnActive = [...document.querySelectorAll(".opcoes_outros.active")];
+    //map para percorrer
+    btnActive.map((el) => {
+        el.classList.remove("active");
+    })
+
+}
+
 
 function primeval() {
 
@@ -16,6 +26,9 @@ function primeval() {
     let title_primeval = document.querySelector(".title_primeval_low h2");
     let sub_title_primeval = document.querySelector(".sub_title_primeval_low p");
 
+    let opcoes_int = document.querySelector(".area_primeval_opcoes_int");
+    let outras_opcoes = document.querySelectorAll(".opcoes_outros");
+
     opcoes_primeval.forEach((element, key) => {
         element.addEventListener('click', () => {
             animation_opacity()
@@ -23,6 +36,11 @@ function primeval() {
                 case 0:
                     removeActive()
                     element.classList.toggle("active");
+                    opcoes_int.style.display = 'flex';
+                    outras_opcoes.forEach( (element) => {
+                        element.classList.remove("active");
+                    });
+                  
 
                     img_primeval.src = 'img_primeval/primeval_low_rate.png';
                     title_primeval.innerHTML = 'PRIMEVAL LOW RATE';
@@ -39,6 +57,10 @@ function primeval() {
                 case 1:
                     removeActive()
                     element.classList.toggle("active");
+                    opcoes_int.style.display = 'flex';
+                    outras_opcoes.forEach( (element) => {
+                        element.classList.remove("active");
+                    });
 
                     img_primeval.src = 'img_primeval/gameplay.png';
                     title_primeval.innerHTML = 'gameplay';
@@ -58,6 +80,10 @@ function primeval() {
                 case 2:
                     removeActive()
                     element.classList.toggle("active");
+                    opcoes_int.style.display = 'flex';
+                    outras_opcoes.forEach( (element) => {
+                        element.classList.remove("active");
+                    });
 
                     img_primeval.src = 'img_primeval/raide_boss.png';
                     title_primeval.innerHTML = 'Raid e EPIC Bosses';
@@ -123,6 +149,24 @@ function primeval() {
                       </tbody>
                     </table>`;
                     break;
+                case 3:
+                    removeActive()
+                    element.classList.toggle("active");
+                    opcoes_int.style.display = 'none';
+                    removeActiveOpcoes()
+                    outras_opcoes[0].classList.add("active");
+                 
+
+                    break;
+                    case 4:
+                        removeActive()
+                        element.classList.toggle("active");
+                        opcoes_int.style.display = 'none';
+                        removeActiveOpcoes()
+                        outras_opcoes[1].classList.add("active");
+                     
+    
+                        break;
             }
         });
     });
@@ -134,7 +178,6 @@ primeval()
 
 function animation_opacity() {
     let animationOpacity = document.querySelectorAll(".animation_opacity_primeval");
-
 
     animationOpacity.forEach((element) => {
 
