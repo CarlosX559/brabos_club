@@ -2247,6 +2247,83 @@ footer {
                         display: flex;
                     }
 
+                    .area_gameplay {
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 60px;
+                        width: 100%;
+
+                        .area_gameplay_war {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 40px;
+                            width: 100%;
+
+                            .area_text_primeval_war {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 30px;
+                                width: 100%;
+                                max-width: 600px;
+
+                                .title_primeval_war h2 {
+                                    color: #9ca3af;
+                                    font-family: var(--font-roboto);
+                                    font-size: 26px;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                }
+
+                                .sub_title_primeval_war p {
+                                    color: #9ca3af;
+                                    font-family: var(--font-titillium);
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                    b {
+                                        color: #FBC321;
+                                    }
+                                }
+                            }
+                        }
+
+                        .area_gameplay_war_2 {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 40px;
+                            width: 100%;
+
+                            .area_text_primeval_war {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 30px;
+                                width: 100%;
+                                max-width: 600px;
+
+                                .title_primeval_war h2 {
+                                    color: #9ca3af;
+                                    font-family: var(--font-roboto);
+                                    font-size: 26px;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                }
+
+                                .sub_title_primeval_war p {
+                                    color: #9ca3af;
+                                    font-family: var(--font-titillium);
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                    b {
+                                        color: #FBC321;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     .area_loja {
                         display: none;
                         justify-content: center;
