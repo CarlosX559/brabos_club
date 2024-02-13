@@ -2462,12 +2462,18 @@ table {
 
     tbody {
         tr {
+            transition: all ease 200ms;
+
             td {
                 font-family: var(--font-roboto);
                 font-size: 18px;
                 color: #9CA3AF;
                 font-weight: 400;
             }
+        }
+
+        tr:hover {
+            background-color: #11151E;
         }
     }
 
@@ -3198,10 +3204,11 @@ table {
                         .area_primeval_opcoes_int {
                             .area_texts_primeval_low {
                                 .sub_title_primeval_low p {
-                                    table.responsive-table  {
+                                    table.responsive-table {
                                         thead {
                                             border: 1px solid #d0d0d0 !important;
                                         }
+
                                         tbody {
                                             height: 184px !important;
                                         }
@@ -3226,9 +3233,11 @@ table {
             }
         }
     }
+
     table thead tr th {
         font-size: 18px;
     }
+
     table.responsive-table th {
         border-bottom: 1px solid #9ca3af;
     }
