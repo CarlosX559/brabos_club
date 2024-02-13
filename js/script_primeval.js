@@ -37,10 +37,10 @@ function primeval() {
                     removeActive()
                     element.classList.toggle("active");
                     opcoes_int.style.display = 'flex';
-                    outras_opcoes.forEach( (element) => {
+                    outras_opcoes.forEach((element) => {
                         element.classList.remove("active");
                     });
-                  
+
 
                     img_primeval.src = 'img_primeval/primeval_low_rate.png';
                     title_primeval.innerHTML = 'PRIMEVAL LOW RATE';
@@ -58,7 +58,7 @@ function primeval() {
                     removeActive()
                     element.classList.toggle("active");
                     opcoes_int.style.display = 'flex';
-                    outras_opcoes.forEach( (element) => {
+                    outras_opcoes.forEach((element) => {
                         element.classList.remove("active");
                     });
 
@@ -81,7 +81,7 @@ function primeval() {
                     removeActive()
                     element.classList.toggle("active");
                     opcoes_int.style.display = 'flex';
-                    outras_opcoes.forEach( (element) => {
+                    outras_opcoes.forEach((element) => {
                         element.classList.remove("active");
                     });
 
@@ -155,18 +155,24 @@ function primeval() {
                     opcoes_int.style.display = 'none';
                     removeActiveOpcoes()
                     outras_opcoes[0].classList.add("active");
-                 
 
                     break;
-                    case 4:
-                        removeActive()
-                        element.classList.toggle("active");
-                        opcoes_int.style.display = 'none';
-                        removeActiveOpcoes()
-                        outras_opcoes[1].classList.add("active");
-                     
-    
-                        break;
+                case 4:
+                    removeActive()
+                    element.classList.toggle("active");
+                    opcoes_int.style.display = 'none';
+                    removeActiveOpcoes()
+                    outras_opcoes[1].classList.add("active");
+
+                    break;
+                case 5:
+                    removeActive()
+                    element.classList.toggle("active");
+                    opcoes_int.style.display = 'none';
+                    removeActiveOpcoes()
+                    outras_opcoes[2].classList.add("active");
+
+                    break;
             }
         });
     });

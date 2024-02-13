@@ -2299,16 +2299,19 @@ footer {
                             justify-content: space-between;
                             align-items: center;
                             width: 100%;
+
                             img {
                                 max-width: max-content;
                                 width: 100%;
                             }
                         }
+
                         .area_eventos_total_2 {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             width: 100%;
+
                             img {
                                 max-width: max-content;
                                 width: 100%;
@@ -2355,7 +2358,7 @@ footer {
                                 flex-direction: column;
                                 gap: 20px;
                                 width: 100%;
-                               
+
                                 .area_infos_evento_int {
                                     display: flex;
                                     flex-direction: column;
@@ -2377,6 +2380,7 @@ footer {
                                         font-family: var(--font-titillium);
                                         font-size: 20px;
                                         font-weight: 400;
+
                                         a {
                                             color: #FBC321;
                                             text-decoration: underline;
@@ -2388,6 +2392,46 @@ footer {
                         }
                     }
 
+                    .area_rates {
+                        display: none;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 60px;
+                        width: 100%;
+                        flex-wrap: wrap;
+
+                        .area_rates_exp {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 40px;
+                            width: 100%;
+                            max-width: 380px;
+
+                            .area_rates_exp_int {
+                                display: flex;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                gap: 20px;
+                                width: 100%;
+
+                                .area_title_rates {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 10px;
+
+                                    .title_rates h2 {
+                                        color: #626262;
+                                        font-family: var(--font-roboto);
+                                        font-size: 22px;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
 
                 }
 
@@ -2396,6 +2440,42 @@ footer {
     }
 }
 
+table {
+    border: 1px solid #9CA3AF !important;
+    border-collapse: collapse !important;
+
+    thead {
+        border-bottom: none;
+
+        tr {
+            background-color: #11151e;
+
+            th {
+                font-family: var(--font-roboto);
+                font-size: 20px;
+                text-transform: uppercase;
+                color: #9CA3AF;
+                font-weight: bold;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                font-family: var(--font-roboto);
+                font-size: 18px;
+                color: #9CA3AF;
+                font-weight: 400;
+            }
+        }
+    }
+
+    td,
+    th {
+        padding: 15px 5px 15px 20px;
+    }
+}
 
 
 @media(max-width: 1024px) {
@@ -2826,7 +2906,7 @@ footer {
             }
         }
     }
-    
+
     #container_primeval {
         .container_primeval {
             .container_primeval_int {
@@ -2835,16 +2915,19 @@ footer {
                         .area_eventos {
                             justify-content: center;
                             align-items: center;
+
                             .area_eventos_int {
                                 .title_eventos h2 {
                                     font-size: 24px;
                                 }
-                              
+
                             }
+
                             .area_eventos_total {
                                 flex-direction: column;
                                 gap: 40px;
                             }
+
                             .area_eventos_total_2 {
                                 flex-direction: column-reverse;
                                 gap: 40px;
@@ -3106,17 +3189,31 @@ footer {
         }
     }
 
-    table.responsive-table {
-        thead {
-            border: 1px solid #d0d0d0 !important;
-        }
 
-        tbody {
-            height: 181px !important;
+    #container_primeval {
+        .container_primeval {
+            .container_primeval_int {
+                .area_primeval {
+                    .area_primeval_opcoes {
+                        .area_primeval_opcoes_int {
+                            .area_texts_primeval_low {
+                                .sub_title_primeval_low p {
+                                    table.responsive-table  {
+                                        thead {
+                                            border: 1px solid #d0d0d0 !important;
+                                        }
+                                        tbody {
+                                            height: 184px !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-
     }
-
 
     #container_primeval {
         .container_primeval {
@@ -3128,6 +3225,12 @@ footer {
                 }
             }
         }
+    }
+    table thead tr th {
+        font-size: 18px;
+    }
+    table.responsive-table th {
+        border-bottom: 1px solid #9ca3af;
     }
 
 }
