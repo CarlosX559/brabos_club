@@ -42,14 +42,14 @@ function primeval() {
                     });
 
 
-                    img_primeval.src = 'img_primeval/primeval_low_rate.png';
-                    title_primeval.innerHTML = 'PRIMEVAL LOW RATE';
-                    sub_title_primeval.innerHTML = `O Bom e velho Lineage! Um mundo para jogadores que apreciam o clássico do
-                    Lineage, com jornada intensa e progressão valiosa.<br><br>
+                    img_primeval.src = 'img_classic/classic_x50.png';
+                    title_primeval.innerHTML = 'CLASSIC';
+                    sub_title_primeval.innerHTML = `Um mundo para os jogadores destinados ao PVP Mid Rate com gráficos renovados e
+                    jogabilidade do clássico Interlude.<br><br>
 
-                    Sistema exclusivo de progressão gradativa, com uma atmosfera única e imersiva
-                    destinada aos que querem explorar ao máximo tudo que o mundo do Lineage 2 tem a
-                    oferecer.<br><br>
+                    Progressão acelerada, recompensas diárias e objetivos coletivos, o PVP é o alvo
+                    principal para os jogadores do mundo Classic. Uma experiência única com
+                    competitividade de alto nível.<br><br>
 
                     <a href="#">Saiba mais sobre este mundo.</a>`;
                     break;
@@ -57,25 +57,10 @@ function primeval() {
                 case 1:
                     removeActive()
                     element.classList.toggle("active");
-                    opcoes_int.style.display = 'flex';
-                    outras_opcoes.forEach((element) => {
-                        element.classList.remove("active");
-                    });
+                    opcoes_int.style.display = 'none';
+                    removeActiveOpcoes()
+                    outras_opcoes[0].classList.add("active");
 
-                    img_primeval.src = 'img_primeval/gameplay.png';
-                    title_primeval.innerHTML = 'gameplay';
-                    sub_title_primeval.innerHTML = `O jogador poderá conectar até 3 telas;<br>
-                    Chat global habilitado (utilize "!" antes das mensagens in-game);<br>
-                    Teleport gratuito até o level 40;<br>
-                    Newbie Guide concede todos os buffs beginner do level 1 ao 80;<br>
-                    Buffs Songs e Dances duram 5 minutos;<br>
-                    Comands habilitado para todos: .xpon/off | .help | .time;<br>
-                    Redução do random respawn dos raid bosses para 1 hora;<br>
-                    Quests para 1ª, 2ª e 3ª job são necessárias para obtenção das classes;<br>
-                    Aprendizado de skills conforme os conceitos estabelecidos pela NCSoft;<br>
-                    Seven Signs e Sieges conforme os conceitos estabelecidos pela NCSoft;<br>
-                    Rates de enchant de armas, armaduras e joias conforme os conceitos estabelecidos pela NCSoft;<br>
-                    PC Bang Points ou Brabos Time Points habilitado.`;
                     break;
                 case 2:
                     removeActive()
@@ -154,7 +139,7 @@ function primeval() {
                     element.classList.toggle("active");
                     opcoes_int.style.display = 'none';
                     removeActiveOpcoes()
-                    outras_opcoes[0].classList.add("active");
+                    outras_opcoes[1].classList.add("active");
 
                     break;
                 case 4:
@@ -162,7 +147,7 @@ function primeval() {
                     element.classList.toggle("active");
                     opcoes_int.style.display = 'none';
                     removeActiveOpcoes()
-                    outras_opcoes[1].classList.add("active");
+                    outras_opcoes[2].classList.add("active");
 
                     break;
                 case 5:
@@ -170,7 +155,7 @@ function primeval() {
                     element.classList.toggle("active");
                     opcoes_int.style.display = 'none';
                     removeActiveOpcoes()
-                    outras_opcoes[2].classList.add("active");
+                    outras_opcoes[3].classList.add("active");
 
                     break;
             }
@@ -200,49 +185,48 @@ function menu() {
     let open = document.querySelector(".menu_open");
     let menu = document.getElementById("container_menu");
     open.addEventListener("click", () => {
-      menu.style.display = "flex";
-      menu.style.right = "0px";
-      menu.style.animation = "move ease-in 400ms";
+        menu.style.display = "flex";
+        menu.style.right = "0px";
+        menu.style.animation = "move ease-in 400ms";
     });
-  
+
     let close = document.querySelector(".close");
-  
+
     close.addEventListener("click", () => {
-      menu.style.display = "flex";
-      menu.style.right = "-100%";
-      menu.style.animation = "move ease-out 400ms";
-    });
-  
-    let area_menu = document.querySelectorAll(".area_menu nav ul li a");
-  
-    area_menu.forEach((element) => {
-      element.addEventListener("click", () => {
+        menu.style.display = "flex";
         menu.style.right = "-100%";
         menu.style.animation = "move ease-out 400ms";
-      });
     });
-  }
-  menu();
-  
-  
-  const animations = document.querySelectorAll("[data-animation]");
-  const animationClass = "animate";
-  
-  function animation_scroll() {
+
+    let area_menu = document.querySelectorAll(".area_menu nav ul li a");
+
+    area_menu.forEach((element) => {
+        element.addEventListener("click", () => {
+            menu.style.right = "-100%";
+            menu.style.animation = "move ease-out 400ms";
+        });
+    });
+}
+menu();
+
+
+const animations = document.querySelectorAll("[data-animation]");
+const animationClass = "animate";
+
+function animation_scroll() {
     const area_window = window.innerHeight * 0.21 * 3.8;
-  
+
     animations.forEach((element) => {
-      let posicaoAtual = element.getBoundingClientRect().top;
-  
-      if (area_window > posicaoAtual) {
-        element.classList.add(animationClass);
-      } else {
-        element.classList.remove(animationClass);
-      }
+        let posicaoAtual = element.getBoundingClientRect().top;
+
+        if (area_window > posicaoAtual) {
+            element.classList.add(animationClass);
+        } else {
+            element.classList.remove(animationClass);
+        }
     });
-  }
-  
-  if (animations.length) {
+}
+
+if (animations.length) {
     window.addEventListener("scroll", animation_scroll);
-  }
-  
+}
