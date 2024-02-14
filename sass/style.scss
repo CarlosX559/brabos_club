@@ -2262,6 +2262,11 @@ footer {
                             gap: 40px;
                             width: 100%;
 
+                            img {
+                                max-width: max-content;
+                                width: 100%;
+                            }
+
                             .area_text_primeval_war {
                                 display: flex;
                                 flex-direction: column;
@@ -2282,6 +2287,7 @@ footer {
                                     font-family: var(--font-titillium);
                                     font-size: 20px;
                                     font-weight: 400;
+
                                     b {
                                         color: #FBC321;
                                     }
@@ -2296,6 +2302,11 @@ footer {
                             gap: 40px;
                             width: 100%;
 
+                            img {
+                                max-width: max-content;
+                                width: 100%;
+                            }
+
                             .area_text_primeval_war {
                                 display: flex;
                                 flex-direction: column;
@@ -2316,6 +2327,7 @@ footer {
                                     font-family: var(--font-titillium);
                                     font-size: 20px;
                                     font-weight: 400;
+
                                     b {
                                         color: #FBC321;
                                     }
@@ -3014,6 +3026,50 @@ table {
                             .area_eventos_total_2 {
                                 flex-direction: column-reverse;
                                 gap: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #container_primeval {
+        .container_primeval {
+            .container_primeval_int {
+                .area_primeval {
+                    .area_primeval_opcoes {
+                        .area_gameplay {
+                            .area_gameplay_war {
+                                flex-direction: column;
+
+                                .area_text_primeval_war {
+                                    gap: 20px;
+
+                                    .title_primeval_war h2 {
+                                        font-size: 22px;
+                                    }
+
+                                    .sub_title_primeval_war p {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+
+                            .area_gameplay_war_2 {
+                                flex-direction: column-reverse;
+
+                                .area_text_primeval_war {
+                                    gap: 20px;
+
+                                    .title_primeval_war h2 {
+                                        font-size: 22px;
+                                    }
+
+                                    .sub_title_primeval_war p {
+                                        font-size: 18px;
+                                    }
+                                }
                             }
                         }
                     }
