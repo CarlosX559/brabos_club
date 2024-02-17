@@ -2346,6 +2346,100 @@ footer {
                         }
                     }
 
+                    .area_bosses {
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 60px;
+                        width: 100%;
+
+                        .bosses_container_total {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            gap: 60px;
+                            width: 100%;
+
+                            .bosses_container {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 60px;
+                                width: 100%;
+                                flex-wrap: wrap;
+
+                                img {
+                                    max-width: max-content;
+                                    width: 100%;
+                                }
+
+                                .area_texts_bosses {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 30px;
+                                    width: 100%;
+                                    max-width: 600px;
+
+                                    .title_bosses h2 {
+                                        color: #9ca3af;
+                                        font-family: var(--font-roboto);
+                                        font-size: 26px;
+                                        font-weight: 700;
+                                        text-transform: uppercase;
+                                    }
+
+                                    .sub_title_bosses p {
+                                        color: #9ca3af;
+                                        font-family: var(--font-titillium);
+                                        font-size: 20px;
+                                        font-weight: 400;
+
+                                    }
+                                }
+                            }
+
+                            .bosses_container_2 {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 60px;
+                                width: 100%;
+                                flex-wrap: wrap;
+
+                                img {
+                                    max-width: max-content;
+                                    width: 100%;
+                                }
+
+                                .area_texts_bosses {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 30px;
+                                    width: 100%;
+                                    max-width: 600px;
+
+                                    .title_bosses h2 {
+                                        color: #9ca3af;
+                                        font-family: var(--font-roboto);
+                                        font-size: 26px;
+                                        font-weight: 700;
+                                        text-transform: uppercase;
+                                    }
+
+                                    .sub_title_bosses p {
+                                        color: #9ca3af;
+                                        font-family: var(--font-titillium);
+                                        font-size: 20px;
+                                        font-weight: 400;
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
                     .area_loja {
                         display: none;
                         justify-content: center;
@@ -3036,6 +3130,38 @@ table {
                             .area_eventos_total_2 {
                                 flex-direction: column-reverse;
                                 gap: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #container_primeval {
+        .container_primeval {
+            .container_primeval_int {
+                .area_primeval {
+                    .area_primeval_opcoes {
+                        .area_bosses {
+                            .bosses_container_total {
+                                .bosses_container {
+                                    flex-direction: column-reverse;
+                                    gap: 40px;
+
+                                    img {
+                                        max-width: 600px;
+                                    }
+                                }
+
+                                .bosses_container_2 {
+                                    flex-direction: column;
+                                    gap: 40px;
+
+                                    img {
+                                        max-width: 600px;
+                                    }
+                                }
                             }
                         }
                     }

@@ -65,84 +65,12 @@ function primeval() {
                 case 2:
                     removeActive()
                     element.classList.toggle("active");
-                    opcoes_int.style.display = 'flex';
-                    outras_opcoes.forEach((element) => {
-                        element.classList.remove("active");
-                    });
-
-                    img_primeval.src = 'img_primeval/raide_boss.png';
-                    title_primeval.innerHTML = 'Raid e EPIC Bosses';
-                    sub_title_primeval.innerHTML = `
-                    <table class='responsive-table'>
-                      <thead>
-                        <tr>
-                            <th>BOSS</th>
-                            <th>TIME</th>
-                            <th>TIME</th>
-                        </tr>
-                      </thead>
-              
-                      <tbody>
-                        <tr>
-                            <td>Normal Raid Boss</td>
-                            <td>12 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Queen Ant</td>
-                            <td>48 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Core</td>
-                            <td>48 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-
-                        <tr>
-                            <td>Orfen</td>
-                            <td>48 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Zaken</td>
-                            <td>72 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Baium</td>
-                            <td>5 dias</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-
-                        <tr>
-                            <td>Frintezza</td>
-                            <td>48 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Antharas</td>
-                            <td>11 dias</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Valakas</td>
-                            <td>11 dias</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-
-                      </tbody>
-                    </table>`;
-                    break;
-                case 3:
-                    removeActive()
-                    element.classList.toggle("active");
                     opcoes_int.style.display = 'none';
                     removeActiveOpcoes()
                     outras_opcoes[1].classList.add("active");
 
                     break;
-                case 4:
+                case 3:
                     removeActive()
                     element.classList.toggle("active");
                     opcoes_int.style.display = 'none';
@@ -150,12 +78,20 @@ function primeval() {
                     outras_opcoes[2].classList.add("active");
 
                     break;
-                case 5:
+                case 4:
                     removeActive()
                     element.classList.toggle("active");
                     opcoes_int.style.display = 'none';
                     removeActiveOpcoes()
                     outras_opcoes[3].classList.add("active");
+
+                    break;
+                case 5:
+                    removeActive()
+                    element.classList.toggle("active");
+                    opcoes_int.style.display = 'none';
+                    removeActiveOpcoes()
+                    outras_opcoes[4].classList.add("active");
 
                     break;
             }
