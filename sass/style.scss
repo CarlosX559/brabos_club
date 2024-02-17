@@ -222,14 +222,24 @@ nav {
 /*Container 1*/
 
 #container_home_brabos {
-    background-image: url(../img/bg_home.png);
+    /*background-image: url(../img/bg_home.png);*/
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1100px;
+    height: 100vh;
     margin-top: -102px;
     padding-top: 20px;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        z-index: 0;
+    }
 
     .container_home_brabos {
         display: flex;
@@ -237,6 +247,7 @@ nav {
         justify-content: center;
         width: 100%;
         height: 100%;
+        position: relative;
 
         .container_home_brabos_int {
             display: flex;
@@ -452,6 +463,15 @@ nav {
 
 .animation_opacity_primeval {
     transition: all linear 400ms;
+}
+
+.divisor {
+    display: flex;
+}
+
+.divisor img {
+    width: 100%;
+    height: 24px;
 }
 
 #container_personagens {
