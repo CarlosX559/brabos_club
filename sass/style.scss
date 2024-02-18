@@ -37,6 +37,47 @@ p {
     margin: 0px !important;
 }
 
+
+[data-animation] {
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.1s;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+[data-delay-1] {
+    transition-delay: 200ms;
+}
+
+[data-delay-2] {
+    transition-delay: 300ms;
+}
+
+[data-delay-3] {
+    transition-delay: 400ms;
+}
+
+[data-delay-4] {
+    transition-delay: 500ms;
+}
+
+[data-animation="down"] {
+    transform: translate3d(0, 20px, 0);
+}
+
+[data-animation="left"] {
+    transform: translate3d(-20px, 0, 0);
+}
+
+[data-animation="right"] {
+    transform: translate3d(20px, 0, 0);
+}
+
+[data-animation].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    transition-timing-function: cubic-bezier(0, 0, 0, 0);
+}
+
 /*Header*/
 header {
     width: 100%;
@@ -197,6 +238,8 @@ nav {
             list-style: none;
 
             a {
+                display: flex;
+                gap: 10px;
                 color: #FFFFFF;
                 font-family: var(--font-roboto);
                 font-weight: 400;
@@ -270,15 +313,21 @@ nav {
                     max-width: 320px;
                     width: 100%;
 
+                    .boxs_brabos:hover {
+                        transform: scale3d(1.05, 1.05, 1.05);
+                    }
+
                     .boxs_brabos {
                         border-radius: 10px;
                         background: rgba(3, 7, 18, 0.80);
                         padding: 25px;
+                        transition: all ease 200ms;
+                        transform-origin: bottom;
 
                         .boxs_brabos_int {
                             display: flex;
                             align-items: center;
-                            justify-content: space-between;
+                            justify-content: center;
                             width: 100%;
 
                             svg {
@@ -341,6 +390,7 @@ nav {
                             width: 100%;
                             max-width: 260px;
 
+
                             .bg_btn_1 {
                                 position: absolute;
                                 max-width: max-content;
@@ -348,6 +398,7 @@ nav {
                                 height: auto;
                                 z-index: 1;
                                 left: -6px;
+
                             }
 
                             .bg_btn_2 {
@@ -357,6 +408,7 @@ nav {
                                 height: auto;
                                 z-index: 1;
                                 right: 4px;
+
                             }
                         }
 
