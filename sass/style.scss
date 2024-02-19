@@ -670,6 +670,8 @@ nav {
 
                                 .video_personagens {
                                     border-radius: 20px;
+                                    max-width: max-content;
+                                    width: 100%;
                                 }            
 
                                 .title_card_personagem h2 {
@@ -3305,7 +3307,6 @@ table {
 
 
     #container_home_brabos {
-        background-position: 30%;
 
         .container_home_brabos {
             .container_home_brabos_int {
