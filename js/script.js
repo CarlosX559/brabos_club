@@ -198,6 +198,7 @@ function personagens() {
 
   let title = document.querySelector(".title_card_personagem h2");
   let sub_title = document.querySelector(".sub_title_info_caracteristicas p");
+  let video = document.querySelector(".video_personagens");
   let personagens_opcao = document.querySelector(".personagens");
   let tipo_mistico = document.querySelector(".title_info_tipo_mistico h2");
   let sub_tipo_mistico = document.querySelector(".sub_title_info_tipo_mistico p");
@@ -227,6 +228,8 @@ function personagens() {
           <b>Warrior:</b> Os que querem seguir o caminho para Warlord (guerreiros que usam lanças) ou Duelist (guerreiros que usam duas espadas).<br>
           <b>Knight:</b> Os que querem seguir o caminho de Tank Paladin ou Dark Avanger (guerreiros que são especializados em defesa).<br>
           <b>Rogue:</b> Os que querem seguir o caminho furtivo Treasure Hunter (que usam adagas) ou longo alcance Hawkeye (que usam arco e flecha).`;
+          video.src = "races_video_loop/human.mp4";
+
           tipo_mistico.innerHTML = "MÍSTICO";
           sub_tipo_mistico.innerHTML = `É um tipo de lutador básico, que possui destreza e força. No estilo de jogo eles são habilidosos em combate de curto alcance, principalmente usando espadas, mas também podem se especializar em combate de longo alcance mais tarde em suas Jobs.<br><br>
           O Humano Místico em sua primeira mudança de classe (Job) pode ser:<br><br>
@@ -244,6 +247,7 @@ function personagens() {
           title.innerHTML = "elfos";
           sub_title.innerHTML = `São velozes em ataque, movimento e lançamento de magias. São precisos em seus ataques, além de ter alto poder de evasão. Seu ponto fraco é sua força de ataque em relação as outras raças.<br>
           Os elfos podem ficar submersos por mais tempo e saltar para locais mais altos.`;
+          video.src = "races_video_loop/elf.mp4";
           info_tipo.innerHTML = `É um tipo de lutador básico, que possui destreza e usam armaduras leves (light) e pesadas (heavy). No estilo de jogo eles são habilidosos em combate de curto alcance, principalmente usando espadas, mas também podem se especializar em combate de longo alcance mais tarde em suas Jobs.<br>
           O Elfo Lutador em sua primeira mudança de classe, pode ser:<br><br>
           <b>Elven Scout:</b> Os que querem seguir caminho para Plains Walker (caçador de recompensas que usam espadas curtas) ou o caminho do Silver Ranger (Arqueiro).<br>
@@ -265,6 +269,7 @@ function personagens() {
           title.innerHTML = "elfos negros";
           sub_title.innerHTML = `Eles possuem alto de poder de Ataque e Magia (Força e Inteligência).<br>
           Os elfos podem ficar submersos por mais tempo e saltar para locais mais altos.`;
+          video.src = "races_video_loop/dark_elf.mp4";
           info_tipo.innerHTML = `É um tipo de lutador, que possui grande força e utiliza armaduras leves (light). No estilo de jogo eles são habilidosos em combate corpo a corpo, principalmente usando espadas de duas mãos e grandes garras.<br>
           O Orc Lutador em sua primeira mudança de classe, pode ser:<br><br>
           <b>Orc Raider:</b> Os que querem seguir caminho para Destroyer (Destruidores importantes para conquista dos Chefes), esses lutadores utilizam grandes e poderosas espadas de duas mãos, mas também são capazes de utilizar lanças com maestria.<br>
@@ -285,6 +290,7 @@ function personagens() {
 
           title.innerHTML = "Orcs";
           sub_title.innerHTML = "Possuem grande força e são robustos em vida e mana, possuem alta capacidade de regeneração de vida, no entanto são classes lentas em movimento, lançamento de magias e ataques.<br>Forte resistência a efeitos negativos (debuffs), como venenos, paralisias."
+          video.src = "races_video_loop/orc.mp4";
           tipo_mistico.innerHTML = "Místico";
           sub_tipo_mistico.innerHTML = `É uma classe mágica poderosa que conjura feitiços, doenças e encantamentos, usa túnicas (robe), podem utilizar, cajados, maças, machados e espadas mágicas.
           Os orcs místicos são excelentes magos de conjuração, mas também podem seguir o caminho de suporte auxiliando seus amigos com buffs e curas.<br><br>
@@ -308,6 +314,7 @@ function personagens() {
           O Anão em sua primeira mudança de classe, pode ser:<br><br>
           <b>Artisan:</b> Os que querem seguir caminho para Warsmith (Artesãos capazes de produzir armas e armaduras poderosas), esses lutadores utilizam grandes machados.<br>
           <b>Scavanger:</b> Os que querem seguir o caminho para Bounty Hunter (guerreiros especializados em colecionar itens e materiais valiosos), esses lutadores utilizam grandes machados, mas também possuem aptidão com lança.`;
+          video.src = "races_video_loop/dwarf.mp4";
           tipo_mistico.innerHTML = "";
           sub_tipo_mistico.innerHTML = "";
           personagens_opcao.src = "img/personagens_dwarfs.png";
