@@ -3215,7 +3215,7 @@ table {
             }
         }
     }
-
+ 
     #container_primeval {
         .container_primeval {
             .container_primeval_int {
@@ -3230,11 +3230,30 @@ table {
                                     img {
                                         max-width: 600px;
                                     }
+                                    .area_texts_bosses {
+                                        gap: 20px;
+                                        .title_bosses h2 {
+                                            font-size: 22px;
+                                        }
+                                        .sub_title_bosses p {
+                                            font-size: 18px;
+                                        }
+                                    }
                                 }
 
                                 .bosses_container_2 {
                                     flex-direction: column;
                                     gap: 40px;
+
+                                    .area_texts_bosses {
+                                        gap: 20px;
+                                        .title_bosses h2 {
+                                            font-size: 22px;
+                                        }
+                                        .sub_title_bosses p {
+                                            font-size: 18px;
+                                        }
+                                    }
 
                                     img {
                                         max-width: 600px;
