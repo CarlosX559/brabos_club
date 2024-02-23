@@ -19,7 +19,10 @@ html {
     --color-font-secondary: #FBC321;
     --font-mediaval: 'MedievalSharp';
     --font-titillium: "Titillium Web";
+    --container-espacamento: 100px 0px 100px 0px;
 }
+
+/*Varivavel espaçamento*/
 
 body {
     margin: 0px;
@@ -152,20 +155,25 @@ header {
                         max-width: max-content;
                         width: 100%;
                         height: auto;
-                        z-index: 1;
+                        z-index: 0;
                         left: 8px;
                         top: -4px;
                     }
+
 
                     .bg_btn_3 {
                         position: absolute;
                         max-width: max-content;
                         width: 100%;
                         height: auto;
-                        z-index: 1;
+                        z-index: 0;
                         right: 4px;
                         top: -4px;
                     }
+                }
+
+                .btn_header_1:hover {
+                    background: rgb(23, 22, 18);
                 }
 
                 .btn_header_1 {
@@ -177,6 +185,7 @@ header {
                     height: 58px;
                     box-shadow: 0px -0.5px 1px 0px rgba(0, 0, 0, 0.30) inset;
                     filter: drop-shadow(0px 0px 6px #000);
+                    transition: all ease 200ms;
 
                     h2 {
                         color: var(--color-font-secondary);
@@ -261,6 +270,69 @@ nav {
     }
 }
 
+@keyframes modal_animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.container_modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 9999;
+    opacity: 0;
+    transition: all ease 200ms;
+    animation: modal_animation 200ms;
+
+
+    .container_modal_int {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1280px;
+        width: 100%;
+
+        .area_modal {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #11151E;
+            max-width: 1000px;
+            padding: 40px;
+            border-radius: 10px;
+            position: relative;
+
+            .close_modal {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                max-width: max-content;
+                width: 100%;
+                cursor: pointer;
+                background-color: #000;
+                padding: 5px;
+                border-radius: 100px;
+            }
+
+            iframe {
+                width: 100%;
+                max-width: 1000px;
+                border-radius: 10px;
+                height: auto;
+            }
+        }
+    }
+}
 
 /*Container 1*/
 
@@ -272,7 +344,6 @@ nav {
     background-size: cover;
     height: 100vh;
     margin-top: -101px;
-    padding-top: 20px;
 
     video {
         position: absolute;
@@ -548,7 +619,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 60px 0px 60px 0px;
+        padding: var(--container-espacamento);
 
         .container_personagens_int {
             display: flex;
@@ -672,7 +743,7 @@ nav {
                                     border-radius: 20px;
                                     max-width: max-content;
                                     width: 100%;
-                                }            
+                                }
 
                                 .title_card_personagem h2 {
                                     color: #FBC321;
@@ -707,11 +778,15 @@ nav {
                                             text-transform: uppercase;
                                         }
 
-                                        .sub_title_info_caracteristicas p {
-                                            color: #9CA3AF;
-                                            font-family: var(--font-titillium);
-                                            font-size: var(--font-sub-title-info);
-                                            font-weight: 400;
+                                        .sub_title_info_caracteristicas {
+                                            ul {
+                                                li {
+                                                    color: #9CA3AF;
+                                                    font-family: var(--font-titillium);
+                                                    font-size: var(--font-sub-title-info);
+                                                    font-weight: 400;
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -808,7 +883,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 60px 0px 60px 0px;
+        padding: var(--container-espacamento);
 
         .container_mundos_int {
             display: flex;
@@ -956,7 +1031,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 60px 0px 60px 0px;
+        padding: var(--container-espacamento);
         height: 100%;
 
         .container_olimpiadas_int {
@@ -1082,7 +1157,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 60px 0px 60px 0px;
+        padding: var(--container-espacamento);
 
         .container_jogar_int {
             display: flex;
@@ -1225,7 +1300,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 60px 0px 60px 0px;
+        padding: var(--container-espacamento);
 
         .container_cards_int {
             display: flex;
@@ -1432,7 +1507,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 60px 0px 60px 0px;
+        padding: var(--container-espacamento);
 
         .container_comunidade_int {
             display: flex;
@@ -1545,7 +1620,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 60px 0px 60px 0px;
+        padding: var(--container-espacamento);
 
         .container_faq_int {
             display: flex;
@@ -1893,12 +1968,13 @@ footer {
     background-size: cover;
     position: relative;
     z-index: 1;
+    margin-top: -100px;
 
     .container_privacidade {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 60px 0px 60px 0px;
+        padding: 160px 0px;
 
         .container_privacidade_int {
             display: flex;
@@ -1930,11 +2006,69 @@ footer {
                     justify-content: center;
                     padding: 40px;
 
+                    .sub_title_termos {
+                        ol {
+                            li {
+                                font-family: var(--font-titillium);
+                                font-size: 24px;
+                                font-weight: 400;
+                                color: #9CA3AF;
+
+                                b {
+                                    font-family: var(--font-roboto);
+                                    font-weight: bold;
+                                    font-size: 30px;
+                                    color: #9CA3AF;
+                                }
+                                u {
+                                    font-family: var(--font-roboto);
+                                    font-weight: bold;
+                                }
+
+                            }
+
+                            li::marker {
+                                font-family: var(--font-roboto);
+                                font-weight: bold;
+                                font-size: 28px;
+                                color: #9CA3AF;
+                            }
+                        }
+                    }
+
                     .sub_title_termos p {
                         font-family: var(--font-titillium);
                         font-size: 24px;
                         font-weight: 400;
                         color: #9CA3AF;
+
+                        ol {
+                            li {
+                                font-family: var(--font-titillium);
+                                font-size: 24px;
+                                font-weight: 400;
+                                color: #9CA3AF;
+
+                                b {
+                                    font-family: var(--font-roboto);
+                                    font-weight: bold;
+                                    font-size: 30px;
+                                    color: #9CA3AF;
+                                }
+                                u {
+                                    font-family: var(--font-roboto);
+                                    font-weight: bold;
+                                }
+
+                            }
+
+                            li::marker {
+                                font-family: var(--font-roboto);
+                                font-weight: bold;
+                                font-size: 24px;
+                                color: #9CA3AF;
+                            }
+                        }
 
                         u {
                             font-family: var(--font-roboto);
@@ -1997,7 +2131,6 @@ footer {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 40px 0px 40px 0px;
         height: 100%;
 
         .container_baixar_int {
@@ -2086,9 +2219,9 @@ footer {
 }
 
 #container_primeval {
-    background-image: url(../img/primeval_bg.png);
+    background-image: url(../img/bg_pages.png);
     width: 100%;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -2098,7 +2231,7 @@ footer {
         justify-content: center;
         width: 100%;
         height: 100%;
-        padding: 80px 0px 60px 0px;
+        padding: var(--container-espacamento);
 
         .container_primeval_int {
             display: flex;
@@ -2277,7 +2410,7 @@ footer {
                                 font-weight: 400;
 
                                 table {
-                                    border: 1px solid #9CA3AF;
+                                    border: 1px solid #1e293b !important;
                                     border-collapse: collapse;
 
                                     thead {
@@ -2712,7 +2845,7 @@ footer {
 }
 
 table {
-    border: 1px solid #9CA3AF !important;
+    border: 1px solid #1e293b !important;
     border-collapse: collapse !important;
 
     thead {
@@ -2762,6 +2895,7 @@ table {
         --font-info: 20px;
         --font-sub-title: 22px;
         --font-title-info: 28px;
+        --container-espacamento: 80px 0px 80px 0px;
     }
 
     header {
@@ -2912,7 +3046,6 @@ table {
 
     #container_home_brabos {
         .container_home_brabos {
-            padding: 40px 0px 40px 0px;
 
             .container_home_brabos_int {
                 .area_home_brabos {
@@ -2950,11 +3083,8 @@ table {
     }
 
 
-
-
     #container_personagens {
         .container_personagens {
-            padding: 40px 0px 40px 0px;
 
             .container_personagens_int {
                 .area_personagens {
@@ -2982,7 +3112,6 @@ table {
 
     #container_mundos {
         .container_mundos {
-            padding: 40px 0px 40px 0px;
 
             .container_mundos_int {
                 .area_mundos {
@@ -3012,7 +3141,6 @@ table {
 
     #container_olimpiadas {
         .container_olimpiadas {
-            padding: 40px 0px 40px 0px;
 
             .container_olimpiadas_int {
                 .area_olimpiadas {
@@ -3046,7 +3174,6 @@ table {
 
     #container_jogar {
         .container_jogar {
-            padding: 40px 0px 40px 0px;
 
             .container_jogar_int {
                 .area_jogar {
@@ -3061,16 +3188,9 @@ table {
         }
     }
 
-    #container_cards {
-        .container_cards {
-            padding: 40px 0px 40px 0px;
-        }
-
-    }
 
     #container_comunidade {
         .container_comunidade {
-            padding: 40px 0px 40px 0px;
 
             .container_comunidade_int {
                 .area_comunidade {
@@ -3087,7 +3207,6 @@ table {
 
     #container_faq {
         .container_faq {
-            padding: 40px 0px 40px 0px;
 
             .container_faq_int {
                 margin: 0px 20px;
@@ -3112,7 +3231,6 @@ table {
 
     #container_privacidade {
         .container_privacidade {
-            padding: 40px 0px 40px 0px;
 
             .container_privacidade_int {
                 padding: 0px 20px;
@@ -3215,7 +3333,7 @@ table {
             }
         }
     }
- 
+
     #container_primeval {
         .container_primeval {
             .container_primeval_int {
@@ -3230,11 +3348,14 @@ table {
                                     img {
                                         max-width: 600px;
                                     }
+
                                     .area_texts_bosses {
                                         gap: 20px;
+
                                         .title_bosses h2 {
                                             font-size: 22px;
                                         }
+
                                         .sub_title_bosses p {
                                             font-size: 18px;
                                         }
@@ -3247,9 +3368,11 @@ table {
 
                                     .area_texts_bosses {
                                         gap: 20px;
+
                                         .title_bosses h2 {
                                             font-size: 22px;
                                         }
+
                                         .sub_title_bosses p {
                                             font-size: 18px;
                                         }
@@ -3322,10 +3445,20 @@ table {
         --font-sub-title: 20px;
         --font-title-info: 26px;
         --font-sub-title-info: 18px;
+        --container-espacamento: 60px 0px 60px 0px;
     }
 
+    .container_modal {
+        .container_modal_int {
+            .area_modal {
+                margin: 0px 20px;
+                padding: 20px;
+            }
+        }
+    }
 
     #container_home_brabos {
+        margin-top: -104px;
 
         .container_home_brabos {
             .container_home_brabos_int {
@@ -3333,7 +3466,7 @@ table {
                     display: flex;
                     flex-direction: column-reverse;
                     gap: 60px;
-                    padding: 0px 20px 0px 20px;
+                    padding: 60px 20px 0px 20px;
                 }
             }
         }
@@ -3341,6 +3474,7 @@ table {
 
 
     #container_personagens {
+
         .container_personagens {
             .container_personagens_int {
                 .area_personagens {
@@ -3544,7 +3678,6 @@ table {
 
     #container_primeval {
         .container_primeval {
-            padding: 40px 0px 40px 0px;
 
             .container_primeval_int {
                 .area_primeval {
@@ -3571,7 +3704,7 @@ table {
                                 .sub_title_primeval_low p {
                                     table.responsive-table {
                                         thead {
-                                            border: 1px solid #d0d0d0 !important;
+                                            border: 1px solid #1e293b !important;
                                         }
 
                                         tbody {
@@ -3604,7 +3737,7 @@ table {
     }
 
     table.responsive-table th {
-        border-bottom: 1px solid #9ca3af;
+        border: 1px solid #1e293b !important;
     }
 
 }

@@ -27,21 +27,21 @@ function faq() {
   quest.forEach((element, key) => {
 
     element.addEventListener('click', () => {
-      
+
       if (element.classList.contains("close_faq")) {
         aswer[key].classList.toggle("open");
         //img_icon[key].src = 'img/+.svg';
-      }else {
+      } else {
         removeActive_faq_quests()
         element.classList.toggle("close_faq");
-     
-      
-    
+
+
+
         removeActive_faq_aswer()
         aswer[key].classList.toggle("open");
         //img_icon[key].src = 'img/-.svg';
       }
-      
+
     });
 
   });
@@ -57,7 +57,7 @@ function animation_opacity_faq() {
   animationOpacity.forEach((element) => {
 
     element.style.animation = "opacidade 400ms";
-  
+
     setTimeout(() => {
       element.style.animation = "";
 
@@ -429,3 +429,29 @@ function mundos() {
 
 mundos();
 
+function close_modal() {
+
+  let open_modal = document.querySelector(".container_modal");
+  let btn_modal = document.querySelector(".bg_btn_2")
+  let close_modal = document.querySelector(".close_modal");
+
+  btn_modal.addEventListener("click", () => {
+    open_modal.style.opacity = 1;
+    open_modal.style.display.animation = "modal_animation 200ms";
+    setTimeout(() => {
+      open_modal.style.display = "flex";
+    }, 200);
+
+  });
+
+  close_modal.addEventListener("click", () => {
+    open_modal.style.opacity = 0;
+    open_modal.style.display.animation = "";
+    setTimeout(() => {
+      open_modal.style.display = "none";
+    }, 200);
+
+  });
+
+}
+close_modal();
