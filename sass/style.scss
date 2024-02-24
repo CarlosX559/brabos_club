@@ -2034,6 +2034,33 @@ footer {
                                 color: #9CA3AF;
                             }
                         }
+                        ul {
+                            li {
+                                font-family: var(--font-titillium);
+                                font-size: 24px;
+                                font-weight: 400;
+                                color: #9CA3AF;
+
+                                b {
+                                    font-family: var(--font-roboto);
+                                    font-weight: bold;
+                                    font-size: 30px;
+                                    color: #9CA3AF;
+                                }
+                                u {
+                                    font-family: var(--font-roboto);
+                                    font-weight: bold;
+                                }
+
+                            }
+
+                            li::marker {
+                                font-family: var(--font-roboto);
+                                font-weight: bold;
+                                font-size: 28px;
+                                color: #9CA3AF;
+                            }
+                        }
                     }
 
                     .sub_title_termos p {
