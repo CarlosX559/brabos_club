@@ -1442,6 +1442,67 @@ nav {
                     width: 100%;
                 }
 
+                .dwarfs_card_jogar {
+                    position: relative;
+
+                    img {
+                        max-width: max-content;
+                        width: 100%;
+                    }
+                    .seven_gign {
+                        position: absolute;
+                        max-width: max-content;
+                        width: 100%;
+                        top: -80px;
+                        left: 32%;
+                        z-index: 10;
+                    }
+
+                    .items_npc {
+                        position: absolute;
+                        max-width: max-content;
+                        width: 100%;
+                        left: 30%;
+                        top: -40px;
+                    }
+
+                    .npcs_event {
+                        position: absolute;
+                        max-width: max-content;
+                        width: 100%;
+                        left: 38%;
+                        top: -40px;
+                    }
+
+                    .baium_boss {
+                        position: absolute;
+                        max-width: max-content;
+                        width: 100%;
+                        left: 0%;
+                        top: -60px;
+                    }
+
+                    .manor {
+                        position: absolute;
+                        max-width: max-content;
+                        width: 100%;
+                        left: 22%;
+                        top: -40px;  
+                    }
+
+                    .espada_amaldicoada {
+                        position: absolute;
+                        max-width: max-content;
+                        width: 100%;
+                        right: 0px;
+                        top: -40px;   
+                    }
+
+
+
+
+                }
+
                 .area_texts_card_dwarfs_jogar {
                     display: flex;
                     align-items: center;
@@ -2020,6 +2081,7 @@ footer {
                                     font-size: 30px;
                                     color: #9CA3AF;
                                 }
+
                                 u {
                                     font-family: var(--font-roboto);
                                     font-weight: bold;
@@ -2034,6 +2096,7 @@ footer {
                                 color: #9CA3AF;
                             }
                         }
+
                         ul {
                             li {
                                 font-family: var(--font-titillium);
@@ -2047,6 +2110,7 @@ footer {
                                     font-size: 30px;
                                     color: #9CA3AF;
                                 }
+
                                 u {
                                     font-family: var(--font-roboto);
                                     font-weight: bold;
@@ -2082,6 +2146,7 @@ footer {
                                     font-size: 30px;
                                     color: #9CA3AF;
                                 }
+
                                 u {
                                     font-family: var(--font-roboto);
                                     font-weight: bold;
@@ -3626,14 +3691,41 @@ table {
 
     }
 
+    .swiper {
+        .swiper-slide {
+            .card_dwarfs_jogar {
+                .card_dwarfs_jogar_int {
+                    .dwarfs_card_jogar {
+
+                        .espada_amaldicoada {
+                            max-width: 70px;
+                        }
+
+                        .seven_gign {
+                            max-width: 120px;
+                            top: -35px;
+                            left: 35%;
+                        }
+
+                        .baium_boss {
+                            max-width: 180px;
+                            top: -40px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
     .swiper .swiper-button-prev {
-        width: 50px;
-        left: 12px;
+        width: 40px;
+        left: 10px;
     }
 
     .swiper .swiper-button-next {
-        width: 50px;
-        right: 12px;
+        width: 40px;
+        right: 10px;
     }
 
     .swiper .swiper-slide .card_dwarfs_jogar {
