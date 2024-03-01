@@ -197,7 +197,7 @@ function personagens() {
   let personagens = document.querySelectorAll(".area_opcoes_personagens img");
 
   let title = document.querySelector(".title_card_personagem h2");
-  let sub_title = document.querySelector(".sub_title_info_caracteristicas p");
+  let sub_title = document.querySelector(".sub_title_info_caracteristicas ul li");
   let video = document.querySelector(".video_personagens");
   let personagens_opcao = document.querySelector(".personagens");
   let tipo_mistico = document.querySelector(".title_info_tipo_mistico h2");
