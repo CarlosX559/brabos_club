@@ -172,10 +172,6 @@ header {
                     }
                 }
 
-                .btn_header_1:hover {
-                    background: rgb(23, 22, 18);
-                }
-
                 .btn_header_1 {
                     display: flex;
                     justify-content: center;
@@ -190,9 +186,10 @@ header {
                     h2 {
                         color: var(--color-font-secondary);
                         font-family: var(--font-roboto);
-                        font-size: 20px;
+                        font-size: 18px;
                         font-weight: 700;
                         text-transform: uppercase;
+                        text-align: center;
                     }
 
                 }
@@ -210,9 +207,10 @@ header {
                     h2 {
                         color: #A4B32F;
                         font-family: var(--font-roboto);
-                        font-size: 20px;
+                        font-size: 18px;
                         font-weight: 700;
                         text-transform: uppercase;
+                        text-align: center;
                     }
 
                 }
