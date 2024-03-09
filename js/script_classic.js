@@ -166,3 +166,35 @@ function animation_scroll() {
 if (animations.length) {
     window.addEventListener("scroll", animation_scroll);
 }
+
+function close_modal() {
+
+    let open_modal = document.querySelector(".container_modal");
+    let btn_modal = document.querySelectorAll(".sub_title_primeval_war p a");
+    let close_modal = document.querySelector(".close_modal");
+
+    let modal_iframe = document.querySelector(".area_modal iframe");
+  
+    btn_modal.forEach( (element, key) => {
+        element.addEventListener("click", () => {
+            modal_iframe.src = btn_modal[key].attributes[0].value;
+            open_modal.style.opacity = 1;
+            open_modal.style.display.animation = "modal_animation 200ms";
+            setTimeout(() => {
+              open_modal.style.display = "flex";
+            }, 200);
+        
+          });
+    });
+
+    close_modal.addEventListener("click", () => {
+      open_modal.style.opacity = 0;
+      open_modal.style.display.animation = "";
+      setTimeout(() => {
+        open_modal.style.display = "none";
+      }, 200);
+  
+    });
+  
+  }
+  close_modal();

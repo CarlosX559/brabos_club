@@ -64,18 +64,22 @@ function primeval() {
 
                     img_primeval.src = 'img_primeval/gameplay.png';
                     title_primeval.innerHTML = 'gameplay';
-                    sub_title_primeval.innerHTML = `O jogador poderá conectar até 3 telas;<br>
-                    Chat global habilitado (utilize "!" antes das mensagens in-game);<br>
-                    Teleport gratuito até o level 40;<br>
-                    Newbie Guide concede todos os buffs beginner do level 1 ao 80;<br>
-                    Buffs Songs e Dances duram 5 minutos;<br>
-                    Comands habilitado para todos: .xpon/off | .help | .time;<br>
-                    Redução do random respawn dos raid bosses para 1 hora;<br>
-                    Quests para 1ª, 2ª e 3ª job são necessárias para obtenção das classes;<br>
-                    Aprendizado de skills conforme os conceitos estabelecidos pela NCSoft;<br>
-                    Seven Signs e Sieges conforme os conceitos estabelecidos pela NCSoft;<br>
-                    Rates de enchant de armas, armaduras e joias conforme os conceitos estabelecidos pela NCSoft;<br>
-                    PC Bang Points ou Brabos Time Points habilitado.`;
+                    sub_title_primeval.innerHTML = `
+                    <ul>
+                        <li>O jogador poderá conectar até 3 telas;</li>
+                        <li>Chat global habilitado (utilize "!" antes das mensagens in-game);</li>
+                        <li>Teleport gratuito até o level 40;</li>
+                        <li>Newbie Guide concede todos os buffs beginner do level 1 ao 80;</li>
+                        <li>Buffs Songs e Dances duram 5 minutos;</li>
+                        <li>Comands habilitado para todos: .xpon/off | .help | .time;</li>
+                        <li>Redução do random respawn dos raid bosses para 1 hora;</li>
+                        <li>Quests para 1ª, 2ª e 3ª job são necessárias para obtenção das classes;</li>
+                        <li>Aprendizado de skills conforme os conceitos estabelecidos pela NCSoft;</li>
+                        <li>Seven Signs e Sieges conforme os conceitos estabelecidos pela NCSoft;</li>
+                        <li>Rates de enchant de armas, armaduras e joias conforme os conceitos estabelecidos pela NCSoft;</li>
+                        <li>PC Bang Points ou Brabos Time Points habilitado.</li>
+                    </ul>
+`;
                     break;
                 case 2:
                     removeActive()

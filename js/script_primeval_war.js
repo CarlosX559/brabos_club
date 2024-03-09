@@ -74,65 +74,65 @@ function primeval() {
                     title_primeval.innerHTML = 'Raid e EPIC Bosses';
                     sub_title_primeval.innerHTML = `
                     <table class='responsive-table'>
-                      <thead>
-                        <tr>
-                            <th>BOSS</th>
-                            <th>TIME</th>
-                            <th>TIME</th>
-                        </tr>
-                      </thead>
-              
-                      <tbody>
-                        <tr>
-                            <td>Normal Raid Boss</td>
-                            <td>12 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Queen Ant</td>
-                            <td>48 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Core</td>
-                            <td>48 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
+                    <thead>
+                      <tr>
+                          <th>BOSS</th>
+                          <th>TIME</th>
+                          <th>TIME</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr>
+                          <td>Bosses (Arena PvP)</td>
+                          <td>12 horas</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
+                      <tr>
+                          <td>Queen Ant</td>
+                          <td>24 horas</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
+                      <tr>
+                          <td>Core</td>
+                          <td>24 horas</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
 
-                        <tr>
-                            <td>Orfen</td>
-                            <td>48 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Zaken</td>
-                            <td>72 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Baium</td>
-                            <td>5 dias</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
+                      <tr>
+                          <td>Orfen</td>
+                          <td>24 horas</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
+                      <tr>
+                          <td>Zaken</td>
+                          <td>48 horas</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
+                      <tr>
+                          <td>Baium</td>
+                          <td>5 dias</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
 
-                        <tr>
-                            <td>Frintezza</td>
-                            <td>48 horas</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Antharas</td>
-                            <td>11 dias</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
-                        <tr>
-                            <td>Valakas</td>
-                            <td>11 dias</td>
-                            <td>1 hora random+-30 minutos</td>
-                        </tr>
+                      <tr>
+                          <td>Frintezza</td>
+                          <td>48 horas</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
+                      <tr>
+                          <td>Antharas</td>
+                          <td>7 dias</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
+                      <tr>
+                          <td>Valakas</td>
+                          <td>7 dias</td>
+                          <td>1 hora random+-30 minutos</td>
+                      </tr>
 
-                      </tbody>
-                    </table>`;
+                    </tbody>
+                  </table>`;
                     break;
                 case 3:
                     removeActive()

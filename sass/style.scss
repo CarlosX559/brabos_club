@@ -22,7 +22,6 @@ html {
     --container-espacamento: 100px 0px 100px 0px;
 }
 
-/*Varivavel espaçamento*/
 
 body {
     margin: 0px;
@@ -320,6 +319,7 @@ nav {
                 background-color: #000;
                 padding: 5px;
                 border-radius: 100px;
+                z-index: 10;
             }
 
             iframe {
@@ -777,6 +777,8 @@ nav {
 
                                         .sub_title_info_caracteristicas {
                                             ul {
+                                                margin: 0px;
+
                                                 li {
                                                     color: #9CA3AF;
                                                     font-family: var(--font-titillium);
@@ -807,6 +809,21 @@ nav {
                                     font-size: var(--font-sub-title-info);
                                     font-weight: 400;
 
+                                    ul {
+                                        margin: 0px;
+
+                                        li {
+                                            color: #9CA3AF;
+                                            font-family: var(--font-titillium);
+                                            font-size: var(--font-sub-title-info);
+                                            font-weight: 400;
+                                        }
+
+                                        li::marker {
+                                            color: #FBC321;
+                                        }
+                                    }
+
                                     b {
                                         color: #FBC321;
                                         font-size: var(--font-sub-title-info);
@@ -833,6 +850,21 @@ nav {
                                     font-size: var(--font-sub-title-info);
                                     font-weight: 400;
 
+                                    ul {
+                                        margin: 0px;
+
+                                        li {
+                                            color: #9CA3AF;
+                                            font-family: var(--font-titillium);
+                                            font-size: var(--font-sub-title-info);
+                                            font-weight: 400;
+                                        }
+
+                                        li::marker {
+                                            color: #FBC321;
+                                        }
+                                    }
+
                                     b {
                                         color: #FBC321;
                                         font-size: var(--font-sub-title-info);
@@ -857,11 +889,10 @@ nav {
 }
 
 
-
 #container_mundos {
     background-image: url(../img/mundo_bg_primeval.png);
     width: 100%;
-    height: 100%;
+    height: 800px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -906,10 +937,12 @@ nav {
                 }
 
                 .area_card_mundos {
+                    display: flex;
                     border-radius: 20px;
                     background: rgba(3, 7, 18, 0.95);
                     max-width: max-content;
                     padding: 40px;
+                    height: 482px;
 
                     .area_card_mundos_int {
                         display: flex;
@@ -1966,7 +1999,7 @@ footer {
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
-                        max-width: 180px;
+                        max-width: 240px;
 
                         a {
                             display: flex;
@@ -2000,6 +2033,14 @@ footer {
                     width: 100%;
                     gap: 20px;
 
+                    a {
+                        .menu_footer {
+                            display: flex;
+                            gap: 10px;
+                        }
+
+                    }
+
                     .menu_footer h2 {
                         font-family: var(--font-roboto);
                         font-weight: 400;
@@ -2007,6 +2048,10 @@ footer {
                         text-transform: uppercase;
                         color: #ffffff;
                         transition: all ease 200ms
+                    }
+
+                    .menu_footer.active h2 {
+                        color: var(--color-font-secondary);
                     }
 
                     .menu_footer h2:hover {
@@ -2256,7 +2301,7 @@ footer {
 #container_baixar {
     background-image: url(../img/baixar_bg.png);
     width: 100%;
-    height: 1000px;
+    height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2302,6 +2347,7 @@ footer {
                         font-weight: bold;
                         color: #FBC321;
                         text-decoration: underline;
+                        cursor: pointer;
                     }
                 }
 
@@ -2545,8 +2591,17 @@ footer {
                                 font-size: 20px;
                                 font-weight: 400;
 
+                                ul {
+                                    margin: 0px;
+                                    padding-left: 20px;
+
+                                    li {
+                                        list-style-type: initial;
+                                    }
+                                }
+
                                 table {
-                                    border: 1px solid #1e293b !important;
+                                    border: 1px solid rgba(255,255,255,0.05) !important;
                                     border-collapse: collapse;
 
                                     thead {
@@ -2634,16 +2689,35 @@ footer {
                                     font-family: var(--font-titillium);
                                     font-size: 20px;
                                     font-weight: 400;
-
+                      
                                     a {
                                         color: #FBC321 !important;
                                         text-decoration: underline;
+                                        cursor: pointer;
                                     }
 
                                     b {
                                         color: #FBC321;
                                     }
                                 }
+                                .sub_title_primeval_war {
+                                    ul {
+                                        margin: 0px;
+                                        padding-left: 20px;
+                                        li {
+                                            list-style-type: initial;
+                                            color: #9ca3af;
+                                            font-family: var(--font-titillium);
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            b {
+                                                color: var(--color-font-secondary);
+                                            }
+                                        }
+                                       
+                                    }
+                                }
+                             
                             }
                         }
 
@@ -2683,12 +2757,32 @@ footer {
                                     a {
                                         color: #FBC321 !important;
                                         text-decoration: underline;
+                                        cursor: pointer;
                                     }
 
                                     b {
                                         color: #FBC321;
                                     }
+
                                 }
+                                .sub_title_primeval_war {
+                                    ul {
+                                        margin: 0px;
+                                        padding-left: 20px;
+                                        li {
+                                            list-style-type: initial;
+                                            color: #9ca3af;
+                                            font-family: var(--font-titillium);
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            b {
+                                                color: var(--color-font-secondary);
+                                            }
+                                        }
+                                       
+                                    }
+                                }
+                             
                             }
                         }
                     }
@@ -2742,6 +2836,20 @@ footer {
                                         font-size: 20px;
                                         font-weight: 400;
 
+                                    }
+                                    .sub_title_bosses {
+                                        ul {
+                                            margin: 0px;
+                                            padding-left: 20px;
+                                            li {
+                                                list-style-type: initial;
+                                                color: #9ca3af;
+                                                font-family: var(--font-titillium);
+                                                font-size: 20px;
+                                                font-weight: 400;
+        
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -2823,6 +2931,19 @@ footer {
                                 font-size: 20px;
                                 font-weight: 400;
                             }
+                            .sub_title_loja {
+                                ul {
+                                    margin: 0px;
+                                    padding-left: 20px;
+                                    li {
+                                        color: #9ca3af;
+                                        font-family: var(--font-titillium);
+                                        font-size: 20px;
+                                        font-weight: 400;
+                                        list-style-type: initial;
+                                    }
+                                }
+                            }
 
                         }
                     }
@@ -2884,6 +3005,19 @@ footer {
                                 font-family: var(--font-titillium);
                                 font-size: 20px;
                                 font-weight: 400;
+                            }
+                            .sub_title_eventos {
+                                ul {
+                                    margin: 0px;
+                                    padding-left: 20px;
+                                    li {
+                                        list-style-type: initial;
+                                        color: #9ca3af;
+                                        font-family: var(--font-titillium);
+                                        font-size: 20px;
+                                        font-weight: 400; 
+                                    }
+                                }
                             }
 
                             .info_bonus_eventos p {
@@ -2981,7 +3115,7 @@ footer {
 }
 
 table {
-    border: 1px solid #1e293b !important;
+    border: 1px solid rgba(255,255,255,0.05) !important;
     border-collapse: collapse !important;
 
     thead {
@@ -3247,6 +3381,8 @@ table {
 
 
     #container_mundos {
+        height: 100%;
+
         .container_mundos {
 
             .container_mundos_int {
@@ -3255,6 +3391,8 @@ table {
                     padding: 0px 20px;
 
                     .area_card_mundos {
+                        height: auto;
+
                         .area_card_mundos_int {
                             flex-direction: column;
                             align-items: center;
@@ -3495,6 +3633,13 @@ table {
                                         .sub_title_bosses p {
                                             font-size: 18px;
                                         }
+                                        .sub_title_bosses {
+                                            ul {
+                                                li {
+                                                    font-size: 18px;
+                                                }
+                                            }
+                                        }
                                     }
                                 }
 
@@ -3598,7 +3743,8 @@ table {
     }
 
     #container_home_brabos {
-        height: 100%;
+        height: 934px;
+
         .container_home_brabos {
             .container_home_brabos_int {
                 .area_home_brabos {
@@ -3625,6 +3771,10 @@ table {
                             .card_personagens_int {
                                 padding: 40px 25px 40px 25px;
                             }
+                        }
+                        .personagens {
+                            max-width: 150px;
+                            width: 100%;
                         }
                     }
                 }
@@ -3657,13 +3807,24 @@ table {
                                     font-size: 20px;
                                 }
                             }
+                            .area_opcoes_mundos {
+                                .area_opcoes_mundos_int {
+                                    gap: 20px;
+                                    img {
+                                        max-width: 88px;
+                                    }
+                                    .mundo_opcao.active {
+                                        border: none;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
-
+    
     #container_olimpiadas {
         .container_olimpiadas {
             .container_olimpiadas_int {
@@ -3779,6 +3940,13 @@ table {
         height: auto;
     }
 
+
+    #container_baixar {
+        padding: 40px 0px 40px 0px;
+        height: 100%;
+    }
+
+
     #container_comunidade {
         .container_comunidade {
             .container_comunidade_int {
@@ -3870,7 +4038,7 @@ table {
                                 .sub_title_primeval_low p {
                                     table.responsive-table {
                                         thead {
-                                            border: 1px solid #1e293b !important;
+                                            border: 1px solid rgba(255,255,255,0.05) !important;
                                         }
 
                                         tbody {
@@ -3903,7 +4071,21 @@ table {
     }
 
     table.responsive-table th {
-        border: 1px solid #1e293b !important;
+        border: 1px solid rgba(255,255,255,0.05) !important;
+    }
+
+    table.responsive-table thead {
+        border-right: 0px !important;
+    }
+    table.responsive-table thead tr {
+        padding: 0px !important;
+    }
+    table.responsive-table th {
+        text-align: left !important;
+    }
+
+    table.responsive-table th {
+        padding: 13.5px;
     }
 
 }
