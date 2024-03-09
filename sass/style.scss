@@ -240,8 +240,65 @@ nav {
         width: 100%;
         max-width: max-content;
 
+        .servidores {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 20px 0px;
+            text-align: left;
+            color: #FFFFFF;
+            font-family: var(--font-roboto);
+            font-weight: 400;
+            font-size: 16px;
+            text-transform: none;
+            cursor: pointer;
+        }
+
+        .servidores:hover>nav ul {
+            display: flex !important;
+        }
+
+        .wiki {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 20px 0px;
+            text-align: left;
+            color: #FFFFFF;
+            font-family: var(--font-roboto);
+            font-weight: 400;
+            font-size: 16px;
+            text-transform: none;
+            cursor: pointer;
+        }
+
+        .wiki:hover>nav ul {
+            display: flex !important;
+        }
+
         li {
+            position: relative;
             list-style: none;
+
+            nav {
+                position: absolute;
+                top: 50px;
+                left: 0px;
+                width: 200px;
+                z-index: 99;
+
+                ul {
+                    display: none !important;
+                    transition: all ease 200ms;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                    background: rgba(3, 7, 18, 1);
+                    padding: 15px !important;
+                    border-radius: 10px;
+
+                }
+            }
 
             a {
                 display: flex;
@@ -3754,11 +3811,50 @@ table {
         }
     }
 
+    nav ul li nav ul li a {
+        font-size: 20px !important;
+        text-transform: none;
+    }
+
+    nav ul .wiki {
+        padding: 0px 0px;
+    }
+
+    nav ul .servidores {
+        padding: 0px 0px;
+        font-size: 26px;
+    }
+
+    nav ul .wiki {
+        padding: 0px 0px;
+        font-size: 26px;
+    }
+
+    nav ul .servidores nav {
+        width: 200px;
+    }
+
+    nav ul .servidores:hover>nav ul {
+        display: flex !important;
+        padding: 15px;
+    }
+
+    nav ul .wiki nav {
+        width: 200px;
+    }
+
+    nav ul .wiki:hover>nav ul {
+        display: flex !important;
+        padding: 15px;
+    }
+
     #container_home_brabos {
         height: 100vh;
+
         video {
             height: 113%;
         }
+
         .container_home_brabos {
             height: auto;
 
