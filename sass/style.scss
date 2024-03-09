@@ -296,7 +296,11 @@ nav {
                     background: rgba(3, 7, 18, 1);
                     padding: 15px !important;
                     border-radius: 10px;
-
+                    li {
+                        a {
+                            text-transform: none;
+                        }
+                    }
                 }
             }
 
