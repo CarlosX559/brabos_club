@@ -365,7 +365,6 @@ nav {
             justify-content: center;
             max-width: 1200px;
             width: 100%;
-            height: 100%;
 
             .area_home_brabos {
                 display: flex;
@@ -2601,7 +2600,7 @@ footer {
                                 }
 
                                 table {
-                                    border: 1px solid rgba(255,255,255,0.05) !important;
+                                    border: 1px solid rgba(255, 255, 255, 0.05) !important;
                                     border-collapse: collapse;
 
                                     thead {
@@ -2689,7 +2688,7 @@ footer {
                                     font-family: var(--font-titillium);
                                     font-size: 20px;
                                     font-weight: 400;
-                      
+
                                     a {
                                         color: #FBC321 !important;
                                         text-decoration: underline;
@@ -2700,24 +2699,27 @@ footer {
                                         color: #FBC321;
                                     }
                                 }
+
                                 .sub_title_primeval_war {
                                     ul {
                                         margin: 0px;
                                         padding-left: 20px;
+
                                         li {
                                             list-style-type: initial;
                                             color: #9ca3af;
                                             font-family: var(--font-titillium);
                                             font-size: 20px;
                                             font-weight: 400;
+
                                             b {
                                                 color: var(--color-font-secondary);
                                             }
                                         }
-                                       
+
                                     }
                                 }
-                             
+
                             }
                         }
 
@@ -2765,24 +2767,27 @@ footer {
                                     }
 
                                 }
+
                                 .sub_title_primeval_war {
                                     ul {
                                         margin: 0px;
                                         padding-left: 20px;
+
                                         li {
                                             list-style-type: initial;
                                             color: #9ca3af;
                                             font-family: var(--font-titillium);
                                             font-size: 20px;
                                             font-weight: 400;
+
                                             b {
                                                 color: var(--color-font-secondary);
                                             }
                                         }
-                                       
+
                                     }
                                 }
-                             
+
                             }
                         }
                     }
@@ -2837,17 +2842,19 @@ footer {
                                         font-weight: 400;
 
                                     }
+
                                     .sub_title_bosses {
                                         ul {
                                             margin: 0px;
                                             padding-left: 20px;
+
                                             li {
                                                 list-style-type: initial;
                                                 color: #9ca3af;
                                                 font-family: var(--font-titillium);
                                                 font-size: 20px;
                                                 font-weight: 400;
-        
+
                                             }
                                         }
                                     }
@@ -2931,10 +2938,12 @@ footer {
                                 font-size: 20px;
                                 font-weight: 400;
                             }
+
                             .sub_title_loja {
                                 ul {
                                     margin: 0px;
                                     padding-left: 20px;
+
                                     li {
                                         color: #9ca3af;
                                         font-family: var(--font-titillium);
@@ -3006,16 +3015,18 @@ footer {
                                 font-size: 20px;
                                 font-weight: 400;
                             }
+
                             .sub_title_eventos {
                                 ul {
                                     margin: 0px;
                                     padding-left: 20px;
+
                                     li {
                                         list-style-type: initial;
                                         color: #9ca3af;
                                         font-family: var(--font-titillium);
                                         font-size: 20px;
-                                        font-weight: 400; 
+                                        font-weight: 400;
                                     }
                                 }
                             }
@@ -3115,7 +3126,7 @@ footer {
 }
 
 table {
-    border: 1px solid rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
     border-collapse: collapse !important;
 
     thead {
@@ -3633,6 +3644,7 @@ table {
                                         .sub_title_bosses p {
                                             font-size: 18px;
                                         }
+
                                         .sub_title_bosses {
                                             ul {
                                                 li {
@@ -3743,9 +3755,15 @@ table {
     }
 
     #container_home_brabos {
-        height: 934px;
+        height: 830px;
+
+        video {
+            height: 90%;
+        }
 
         .container_home_brabos {
+            height: auto;
+
             .container_home_brabos_int {
                 .area_home_brabos {
                     display: flex;
@@ -3772,6 +3790,7 @@ table {
                                 padding: 40px 25px 40px 25px;
                             }
                         }
+
                         .personagens {
                             max-width: 150px;
                             width: 100%;
@@ -3807,12 +3826,15 @@ table {
                                     font-size: 20px;
                                 }
                             }
+
                             .area_opcoes_mundos {
                                 .area_opcoes_mundos_int {
                                     gap: 20px;
+
                                     img {
-                                        max-width: 88px;
+                                        max-width: 70px;
                                     }
+
                                     .mundo_opcao.active {
                                         border: none;
                                     }
@@ -3824,7 +3846,7 @@ table {
             }
         }
     }
-    
+
     #container_olimpiadas {
         .container_olimpiadas {
             .container_olimpiadas_int {
@@ -4038,7 +4060,7 @@ table {
                                 .sub_title_primeval_low p {
                                     table.responsive-table {
                                         thead {
-                                            border: 1px solid rgba(255,255,255,0.05) !important;
+                                            border: 1px solid rgba(255, 255, 255, 0.05) !important;
                                         }
 
                                         tbody {
@@ -4071,15 +4093,17 @@ table {
     }
 
     table.responsive-table th {
-        border: 1px solid rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
 
     table.responsive-table thead {
         border-right: 0px !important;
     }
+
     table.responsive-table thead tr {
         padding: 0px !important;
     }
+
     table.responsive-table th {
         text-align: left !important;
     }
