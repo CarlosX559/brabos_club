@@ -3755,7 +3755,10 @@ table {
     }
 
     #container_home_brabos {
-
+        height: 100vh;
+        video {
+            height: calc(100% + 104px);
+        }
         .container_home_brabos {
             height: auto;
 
