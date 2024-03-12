@@ -56,7 +56,7 @@
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li>
-                                    <a href="atualizacoes.html" >ATUALIZAÇÕES</a>
+                                    <a href="atualizacoes.html">ATUALIZAÇÕES</a>
                                 </li>
                                 <li>
                                     <a class="active" href="baixar.html">BAIXAR</a>
@@ -87,8 +87,9 @@
 
                                     <nav>
                                         <ul>
-                                            <li><a href="https://brabosclub.notion.site/50a128cff97c4f18a99bb772803d30f7?v=97d3c896afe346daa4262de966688b1a"
-                                                  >Brabos Academy</a></li>
+                                            <li><a
+                                                    href="https://brabosclub.notion.site/50a128cff97c4f18a99bb772803d30f7?v=97d3c896afe346daa4262de966688b1a">Brabos
+                                                    Academy</a></li>
                                         </ul>
                                     </nav>
                                 </li>
@@ -155,6 +156,7 @@
             table.responsive-table th {
                 padding: 13.5px;
             }
+
             table.responsive-table thead tr th::before {
                 content: '';
             }
@@ -176,6 +178,7 @@
             table.responsive-table tbody tr {
                 padding: 0px;
             }
+
             .btn_baixar_1_int {
                 inline-size: 250px;
             }
@@ -327,7 +330,7 @@
                                 </h2>
                             </div>
                         </a>
-                        
+
                         <li class="servidores">
                             SERVIDORES
                             <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
@@ -354,8 +357,9 @@
 
                             <nav>
                                 <ul>
-                                    <li><a href="https://brabosclub.notion.site/50a128cff97c4f18a99bb772803d30f7?v=97d3c896afe346daa4262de966688b1a"
-                                        >Brabos Academy</a></li>
+                                    <li><a
+                                            href="https://brabosclub.notion.site/50a128cff97c4f18a99bb772803d30f7?v=97d3c896afe346daa4262de966688b1a">Brabos
+                                            Academy</a></li>
                                 </ul>
                             </nav>
                         </li>
@@ -416,6 +420,61 @@
         </div>
     </footer>
     <script defer src="js/script.js"></script>
+    <script>
+        function close_modal() {
+
+            let open_modal = document.querySelector(".container_modal");
+            let btn_modal = document.querySelector(".bg_btn_2")
+            let close_modal = document.querySelector(".close_modal");
+
+            btn_modal.addEventListener("click", () => {
+                open_modal.style.opacity = 1;
+                open_modal.style.display.animation = "modal_animation 200ms";
+                setTimeout(() => {
+                    open_modal.style.display = "flex";
+                }, 200);
+
+            });
+
+            close_modal.addEventListener("click", () => {
+                open_modal.style.opacity = 0;
+                open_modal.style.display.animation = "";
+                setTimeout(() => {
+                    open_modal.style.display = "none";
+                }, 200);
+
+            });
+
+        }
+        close_modal();
+
+        function close_modal() {
+
+            let open_modal = document.querySelector(".container_modal");
+            let btn_modal = document.querySelector(".sub_title_container_baixar p b")
+            let close_modal = document.querySelector(".close_modal");
+
+            btn_modal.addEventListener("click", () => {
+                open_modal.style.opacity = 1;
+                open_modal.style.display.animation = "modal_animation 200ms";
+                setTimeout(() => {
+                    open_modal.style.display = "flex";
+                }, 200);
+
+            });
+
+            close_modal.addEventListener("click", () => {
+                open_modal.style.opacity = 0;
+                open_modal.style.display.animation = "";
+                setTimeout(() => {
+                    open_modal.style.display = "none";
+                }, 200);
+
+            });
+
+        }
+        close_modal();
+    </script>
 </body>
 
 </html>
