@@ -857,27 +857,15 @@ video::-webkit-media-controls {
                                 }
                             }
 
-                            .area_texts_card_personagens::-webkit-scrollbar {
-                                background: rgba(3, 7, 18, 0.8) !important;
-                                width: 10px;
-                                
-                            }
-                            .area_texts_card_personagens::-webkit-scrollbar-track {
-                                background: rgba(3, 7, 18, 0.8) !important;
-                            }
-
-                            .area_texts_card_personagens::-webkit-scrollbar-thumb {
-                                background: rgba(255, 255, 255, 0.11) !important;
-                                border-radius: 20px;
-                       
-                            }
 
                             .area_texts_card_personagens {
                                 display: flex;
                                 align-items: center;
                                 flex-direction: column;
                                 gap: 30px;
-                                overflow-y: auto;
+                                overflow-y: scroll;
+                                /* has to be scroll, not auto */
+                                -webkit-overflow-scrolling: touch;
                                 height: 800px;
                                 width: 100%;
                                 max-width: 600px;
@@ -925,7 +913,7 @@ video::-webkit-media-controls {
                                         .sub_title_info_caracteristicas {
                                             ul {
                                                 margin: 0px;
-                                      
+
                                                 li {
                                                     color: #9CA3AF;
                                                     font-family: var(--font-titillium);
@@ -1021,6 +1009,23 @@ video::-webkit-media-controls {
                                         font-weight: 700;
                                     }
                                 }
+
+                            }
+
+                            .area_texts_card_personagens::-webkit-scrollbar {
+                                background-color: rgba(3, 7, 18, 0.8);
+                                width: 10px;
+                                border-radius: 20px;
+                            }
+
+                            .area_texts_card_personagens::-webkit-scrollbar-track {
+                                background-color: rgba(3, 7, 18, 0.8);
+                                border-radius: 20px;
+                            }
+
+                            .area_texts_card_personagens::-webkit-scrollbar-thumb {
+                                background-color: rgba(255, 255, 255, 0.1);
+                                border-radius: 20px;
 
                             }
 
