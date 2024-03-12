@@ -925,12 +925,13 @@ video::-webkit-media-controls {
                                         .sub_title_info_caracteristicas {
                                             ul {
                                                 margin: 0px;
-
+                                      
                                                 li {
                                                     color: #9CA3AF;
                                                     font-family: var(--font-titillium);
                                                     font-size: var(--font-sub-title-info);
                                                     font-weight: 400;
+                                                    list-style-type: disc;
                                                 }
                                             }
                                         }
@@ -964,6 +965,7 @@ video::-webkit-media-controls {
                                             font-family: var(--font-titillium);
                                             font-size: var(--font-sub-title-info);
                                             font-weight: 400;
+                                            list-style-type: disc;
                                         }
 
                                         li::marker {
@@ -1005,6 +1007,7 @@ video::-webkit-media-controls {
                                             font-family: var(--font-titillium);
                                             font-size: var(--font-sub-title-info);
                                             font-weight: 400;
+                                            list-style-type: disc;
                                         }
 
                                         li::marker {
