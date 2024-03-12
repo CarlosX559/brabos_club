@@ -457,7 +457,7 @@ function mundos() {
           title_mundos.innerHTML = "PRIMEVAL LOW RATE";
           sub_title_mundos.innerHTML = `O Bom e velho Lineage! Um mundo para jogadores que apreciam o clássico do Lineage, com jornada intensa e progressão valiosa.<br><br>
           Sistema exclusivo de progressão gradativa, com uma atmosfera única e imersiva destinada aos que querem explorar ao máximo tudo que o mundo do Lineage 2 tem a oferecer.<br><br>
-          <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+          <u><a href="primeval.html">Saiba mais sobre este mundo.</a></u>`;
 
           bg_mundos.style.backgroundImage = "url(img/mundo_bg_primeval_low.png)";
 
@@ -469,7 +469,8 @@ function mundos() {
           title_mundos.innerHTML = "PRIMEVAL WAR";
           sub_title_mundos.innerHTML = `Um Mundo para os amantes do PVP. Personagens prontos para o combate com jornada simplificada.<br><br>
           Temporadas mensais com mecânicas e eventos exclusivos para revelar os melhores guerreiros deste mundo. Renovação de recursos e destaque aos que se mostrarem habilidosos no combate PVP.<br><br>
-          <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+          <u><a href="primeval_war.html">Saiba mais sobre este mundo.</a></u>`;
+
 
           bg_mundos.style.backgroundImage = "url(img/mundo_bg_primeval.png)";
 
@@ -481,7 +482,7 @@ function mundos() {
           title_mundos.innerHTML = "CLASSIC";
           sub_title_mundos.innerHTML = `Um mundo para os jogadores destinados ao PVP Mid Rate com gráficos renovados e jogabilidade do clássico Interlude.<br><br>
           Progressão acelerada, recompensas diárias e objetivos coletivos, o PVP é o alvo principal para os jogadores do mundo Classic. Uma experiência única com competitividade de alto nível.<br><br>
-          <u><a href="#">Saiba mais sobre este mundo.</a></u>`;
+          <u><a href="classic.html">Saiba mais sobre este mundo.</a></u>`;
 
           bg_mundos.style.backgroundImage = "url(img/mundo_bg_classic.png)";
 
@@ -502,7 +503,7 @@ function mundos() {
 
 mundos();
 
-function close_modal() {
+/*function close_modal() {
 
   let open_modal = document.querySelector(".container_modal");
   let btn_modal = document.querySelector(".bg_btn_2")
@@ -554,4 +555,4 @@ function close_modal() {
   });
 
 }
-close_modal();
+close_modal();*/
