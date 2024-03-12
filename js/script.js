@@ -286,7 +286,7 @@ function personagens() {
           </li>
         </ul>
           `;
-          personagens_opcao.src = "img/personagens_elfos.png";
+          personagens_opcao.src = "img/personagens_elfos.webp";
           break;
 
         case 2:
@@ -390,7 +390,7 @@ function personagens() {
           video.src = "races_video_loop/dwarf.mp4";
           tipo_mistico.innerHTML = "";
           sub_tipo_mistico.innerHTML = "";
-          personagens_opcao.src = "img/personagens_dwarfs.png";
+          personagens_opcao.src = "img/personagens_dwarfs.webp";
           break;
       }
 
@@ -459,9 +459,9 @@ function mundos() {
           Sistema exclusivo de progressão gradativa, com uma atmosfera única e imersiva destinada aos que querem explorar ao máximo tudo que o mundo do Lineage 2 tem a oferecer.<br><br>
           <u><a href="primeval.html">Saiba mais sobre este mundo.</a></u>`;
 
-          bg_mundos.style.backgroundImage = "url(img/mundo_bg_primeval_low.png)";
+          bg_mundos.style.backgroundImage = "url(img/mundo_bg_primeval_low.webp)";
 
-          img_mundos.src = "img/mundo_primeval_lo_rate.png";
+          img_mundos.src = "img/mundo_primeval_lo_rate.webp";
           break;
         case 1:
           removeActive_mundos()
@@ -472,9 +472,9 @@ function mundos() {
           <u><a href="primeval_war.html">Saiba mais sobre este mundo.</a></u>`;
 
 
-          bg_mundos.style.backgroundImage = "url(img/mundo_bg_primeval.png)";
+          bg_mundos.style.backgroundImage = "url(img/mundo_bg_primeval.webp)";
 
-          img_mundos.src = "img/mundo_primeval.png";
+          img_mundos.src = "img/mundo_primeval.webp";
           break;
         case 2:
           removeActive_mundos()
@@ -484,9 +484,9 @@ function mundos() {
           Progressão acelerada, recompensas diárias e objetivos coletivos, o PVP é o alvo principal para os jogadores do mundo Classic. Uma experiência única com competitividade de alto nível.<br><br>
           <u><a href="classic.html">Saiba mais sobre este mundo.</a></u>`;
 
-          bg_mundos.style.backgroundImage = "url(img/mundo_bg_classic.png)";
+          bg_mundos.style.backgroundImage = "url(img/mundo_bg_classic.webp)";
 
-          img_mundos.src = "img/mundo_classic.png";
+          img_mundos.src = "img/mundo_classic.webp";
 
           break;
 
