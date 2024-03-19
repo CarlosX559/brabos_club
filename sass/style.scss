@@ -1843,7 +1843,10 @@ video::-webkit-media-controls {
 
 }
 
-
+.atualizacoes_container {
+    margin-top: -100px;
+    padding-top: 60px;
+}
 
 #container_faq {
     background-image: url(../img/bg_pages.webp);
@@ -1854,8 +1857,8 @@ video::-webkit-media-controls {
     background-size: cover;
     position: relative;
     z-index: 1;
-    margin-top: -100px;
-    padding-top: 60px;
+    
+ 
 
     .bg_shadow {
         position: absolute;
@@ -4229,9 +4232,13 @@ table {
         }
     }
 
-    #container_faq {
+    .atualizacoes_container {
         margin-top: -100px;
         padding-top: 40px;
+
+    }
+    
+    #container_faq {
 
         .container_faq {
             .container_faq_int {
