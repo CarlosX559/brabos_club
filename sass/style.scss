@@ -4369,3 +4369,87 @@ table {
     }
 
 }
+
+@media(max-width: 320px) {
+    .swiper {
+        .swiper-slide {
+            .card_dwarfs_jogar {
+                .card_dwarfs_jogar_int {
+                    .dwarfs_card_jogar {
+                        .items_npc {
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #container_comunidade {
+        .container_comunidade {
+            .container_comunidade_int {
+                .area_comunidade {
+                    .area_cards_comunidade {
+                        padding: 0px 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    #container_olimpiadas {
+        .container_olimpiadas {
+            .container_olimpiadas_int {
+                .area_olimpiadas {
+                    .area_cards_olimpiadas {
+                        .card_olimpiadas {
+                            .card_olimpiadas_int {
+                                .icone_olimpiadas {
+                                    max-width: 100px;
+                                }
+                                .icone_guerras {
+                                    max-width: 100px;
+                                }
+                            }
+                            .area_texts_card_olimpiadas {
+                                padding: 0px 20px 40px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #container_mundos {
+        .container_mundos {
+            .container_mundos_int {
+                .area_mundos {
+                    .area_card_mundos {
+                        padding: 40px 20px;
+                    }
+                }
+            }
+        }
+    }
+    #container_jogar [
+        .container_jogar {
+            .container_jogar_int {
+                .area_jogar {
+                    .area_card_dwarfs_jogar_total {
+                        .card_dwarfs_jogar {
+                            .card_dwarfs_jogar_int {
+                                .area_texts_card_dwarfs_jogar {
+                                    padding: 0px 20px 40px 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+   
+
+
+}
